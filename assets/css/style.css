@@ -1,0 +1,27 @@
+/* Josh Home Services
+   Main website stylesheet
+   Version 1.0
+*/
+
+:root {
+    --color-navy: #0b1f33;
+    --color-green: #2f8f5b;
+    --color-white: #ffffff;
+    --color-light: #f5f7f8;
+    --color-text: #17212b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--color-text);
+    background: var(--color-white);
+}
