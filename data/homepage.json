@@ -1,0 +1,48 @@
+{
+    "hero": {
+        "eyebrow": "Pretoria Home Services",
+        "title": "Professional Home Services in Pretoria",
+        "description": "Reliable property maintenance, repairs, renovations and practical property services for homes, businesses and other properties.",
+        "primaryAction": "Request a Quote",
+        "secondaryAction": "Explore Services"
+    },
+
+    "trust": {
+        "items": [
+            "Residential Properties",
+            "Commercial Spaces",
+            "Property Maintenance",
+            "Repairs & Improvements"
+        ]
+    },
+
+    "services": {
+        "eyebrow": "What We Do",
+        "title": "Practical Property Services From One Team",
+        "description": "From everyday maintenance and repairs to renovations, outdoor improvements and specialist property work."
+    },
+
+    "projects": {
+        "eyebrow": "Our Work",
+        "title": "Real Work. Real Properties.",
+        "description": "Explore selected work completed by Josh Home Services across different property environments."
+    },
+
+    "areas": {
+        "eyebrow": "Where We Work",
+        "title": "Serving Pretoria and Surrounding Areas",
+        "description": "Josh Home Services is based in Pretoria East and works across Pretoria and selected surrounding areas."
+    },
+
+    "guides": {
+        "eyebrow": "Property Advice",
+        "title": "Practical Guides for Property Owners",
+        "description": "Useful information covering maintenance, repairs, renovations and property improvements."
+    },
+
+    "cta": {
+        "eyebrow": "Need Work Done?",
+        "title": "Let's Talk About Your Property",
+        "description": "Tell us what needs attention and we can discuss the work required."
+    }
+}
