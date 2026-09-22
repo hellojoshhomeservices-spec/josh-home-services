@@ -1250,3 +1250,190 @@ main > section:nth-child(3n) {
         gap: 40px;
     }
 }
+
+/* =========================================================
+   Brick + Steel Material Section
+   ========================================================= */
+
+.material-section {
+    padding: 0 !important;
+    background: var(--navy-950) !important;
+}
+
+.material-grid {
+    display: grid;
+
+    grid-template-columns: 1.25fr 0.75fr;
+
+    min-height: 500px;
+}
+
+.material-panel {
+    position: relative;
+
+    min-height: 500px;
+
+    overflow: hidden;
+}
+
+.material-brick {
+    background-color: var(--brick-800);
+
+    background-image:
+        linear-gradient(
+            rgba(35, 17, 14, 0.3),
+            rgba(35, 17, 14, 0.5)
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 39px,
+            rgba(255, 255, 255, 0.08) 40px,
+            transparent 41px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 78px,
+            rgba(0, 0, 0, 0.20) 79px,
+            transparent 81px
+        );
+}
+
+.material-brick::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 20%,
+            rgba(255, 255, 255, 0.08) 50%,
+            transparent 70%
+        );
+
+    transform: translateX(-100%);
+
+    transition: transform 900ms ease;
+}
+
+.material-brick:hover::after {
+    transform: translateX(100%);
+}
+
+.material-steel {
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            #111b22,
+            #3b4b55
+        );
+}
+
+.material-steel::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.11) 48%,
+            transparent 52%
+        );
+}
+
+.steel-lines {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.18;
+
+    background:
+        repeating-linear-gradient(
+            115deg,
+            transparent 0,
+            transparent 52px,
+            rgba(255, 255, 255, 0.22) 53px,
+            transparent 54px
+        );
+}
+
+.material-content {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 50px;
+}
+
+.material-content h2 {
+    max-width: 650px;
+
+    color: var(--white);
+}
+
+.material-content h3 {
+    max-width: 320px;
+
+    color: var(--white);
+
+    font-size: 2rem;
+
+    line-height: 1.05;
+}
+
+.material-content p:not(.eyebrow) {
+    max-width: 620px;
+
+    color:
+        rgba(255, 255, 255, 0.68);
+}
+
+.material-symbol {
+    display: inline-flex;
+
+    margin-bottom: 25px;
+
+    padding: 10px 14px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    color: var(--green-500);
+
+    font-size: 0.75rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+}
+
+@media (max-width: 800px) {
+
+    .material-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .material-panel {
+        min-height: 420px;
+    }
+
+    .material-content {
+        padding: 32px;
+    }
+
+}
