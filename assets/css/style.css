@@ -1,30 +1,59 @@
 /* =========================================================
    Josh Home Services
-   Main Website Stylesheet
+   Premium Design System
+   Steel + Brick + Glass + Concrete + Navy
    ========================================================= */
 
 :root {
-    --color-navy: #0b1f33;
-    --color-navy-light: #15334f;
-    --color-green: #2f8f5b;
-    --color-green-dark: #246f46;
+    --navy-950: #071521;
+    --navy-900: #0b1f33;
+    --navy-800: #12314b;
+    --navy-700: #194563;
 
-    --color-white: #ffffff;
-    --color-light: #f5f7f8;
-    --color-border: #dce3e8;
+    --steel-100: #f3f5f6;
+    --steel-200: #dce2e6;
+    --steel-300: #b8c2c9;
+    --steel-500: #71808b;
+    --steel-700: #3f4d57;
+    --steel-900: #202a31;
 
-    --color-text: #17212b;
-    --color-muted: #61707d;
+    --brick-700: #713b32;
+    --brick-800: #5a2e28;
+
+    --green-500: #35a866;
+    --green-600: #2f8f5b;
+    --green-700: #246f46;
+
+    --white: #ffffff;
+    --off-white: #f7f8f8;
+
+    --text: #17212b;
+    --muted: #63717c;
 
     --container-width: 1180px;
 
-    --radius-small: 10px;
-    --radius-medium: 18px;
-    --radius-large: 28px;
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-lg: 28px;
+    --radius-xl: 36px;
 
-    --shadow-soft:
-        0 12px 40px rgba(11, 31, 51, 0.08);
+    --shadow-sm:
+        0 8px 24px rgba(7, 21, 33, 0.08);
+
+    --shadow-md:
+        0 18px 50px rgba(7, 21, 33, 0.14);
+
+    --shadow-lg:
+        0 30px 80px rgba(7, 21, 33, 0.20);
+
+    --transition-fast: 180ms ease;
+    --transition-medium: 320ms ease;
 }
+
+
+/* =========================================================
+   Reset
+   ========================================================= */
 
 * {
     box-sizing: border-box;
@@ -36,6 +65,7 @@ html {
 
 body {
     margin: 0;
+
     font-family:
         Inter,
         -apple-system,
@@ -44,8 +74,8 @@ body {
         Arial,
         sans-serif;
 
-    color: var(--color-text);
-    background: var(--color-white);
+    color: var(--text);
+    background: var(--white);
 
     line-height: 1.6;
 }
@@ -59,6 +89,16 @@ a {
     color: inherit;
 }
 
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   Layout
+   ========================================================= */
+
 .container {
     width: min(
         calc(100% - 40px),
@@ -66,6 +106,11 @@ a {
     );
 
     margin-inline: auto;
+}
+
+main > section {
+    position: relative;
+    padding: 110px 0;
 }
 
 
@@ -82,19 +127,25 @@ p {
 
 h1 {
     max-width: 900px;
+
     margin-bottom: 24px;
 
-    font-size: clamp(2.5rem, 6vw, 5.5rem);
-    line-height: 0.98;
-    letter-spacing: -0.045em;
+    font-size: clamp(2.8rem, 6vw, 5.8rem);
+    line-height: 0.96;
+    letter-spacing: -0.05em;
 }
 
 h2 {
     margin-bottom: 18px;
 
-    font-size: clamp(2rem, 4vw, 3.4rem);
-    line-height: 1.05;
-    letter-spacing: -0.03em;
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+h3 {
+    font-size: 1.35rem;
+    line-height: 1.15;
 }
 
 p {
@@ -104,12 +155,57 @@ p {
 .eyebrow {
     margin-bottom: 14px;
 
-    color: var(--color-green);
-    font-size: 0.78rem;
-    font-weight: 800;
+    color: var(--green-500);
 
-    letter-spacing: 0.14em;
+    font-size: 0.76rem;
+    font-weight: 900;
+
+    letter-spacing: 0.16em;
     text-transform: uppercase;
+}
+
+
+/* =========================================================
+   Metallic utility surfaces
+   ========================================================= */
+
+.surface-steel {
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #edf1f3 48%,
+            #ffffff 100%
+        );
+}
+
+.surface-navy {
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy-950),
+            var(--navy-900) 55%,
+            var(--navy-800)
+        );
+}
+
+.surface-glass {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.14),
+            rgba(255, 255, 255, 0.04)
+        );
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.16),
+        0 20px 60px rgba(0, 0, 0, 0.14);
+
+    backdrop-filter: blur(18px);
 }
 
 
@@ -122,13 +218,13 @@ p {
     top: 0;
     z-index: 1000;
 
-    background:
-        rgba(255, 255, 255, 0.86);
-
     border-bottom:
-        1px solid rgba(220, 227, 232, 0.8);
+        1px solid rgba(184, 194, 201, 0.45);
 
-    backdrop-filter: blur(18px);
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    backdrop-filter: blur(20px);
 }
 
 .site-header .container {
@@ -142,13 +238,13 @@ p {
 }
 
 .site-logo {
-    color: var(--color-navy);
+    color: var(--navy-900);
 
-    font-size: 1.05rem;
-    font-weight: 900;
+    font-size: 1.08rem;
+    font-weight: 950;
 
     text-decoration: none;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
 }
 
 .site-nav {
@@ -158,21 +254,140 @@ p {
 }
 
 .site-nav a {
-    color: var(--color-muted);
+    position: relative;
 
-    font-size: 0.92rem;
-    font-weight: 700;
+    color: var(--steel-700);
+
+    font-size: 0.9rem;
+    font-weight: 750;
 
     text-decoration: none;
+
+    transition:
+        color var(--transition-fast);
+}
+
+.site-nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -8px;
+
+    height: 2px;
+
+    background: var(--green-500);
+
+    transition:
+        right var(--transition-fast);
 }
 
 .site-nav a:hover {
-    color: var(--color-green);
+    color: var(--navy-900);
+}
+
+.site-nav a:hover::after {
+    right: 0;
 }
 
 
 /* =========================================================
-   Hero
+   Buttons
+   ========================================================= */
+
+.button {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 54px;
+
+    padding: 0 24px;
+
+    overflow: hidden;
+
+    border: 1px solid transparent;
+    border-radius: 999px;
+
+    font-weight: 850;
+
+    text-decoration: none;
+
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast);
+}
+
+.button::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.32),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition:
+        left 500ms ease;
+}
+
+.button:hover::after {
+    left: 140%;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green-500),
+            var(--green-700)
+        );
+
+    box-shadow:
+        0 10px 30px rgba(47, 143, 91, 0.25);
+}
+
+.button-primary:hover {
+    box-shadow:
+        0 14px 36px rgba(47, 143, 91, 0.34);
+}
+
+.button-secondary {
+    color: var(--white);
+
+    border-color:
+        rgba(255, 255, 255, 0.26);
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   Hero foundation
    ========================================================= */
 
 .hero {
@@ -181,21 +396,74 @@ p {
     display: flex;
     align-items: center;
 
-    color: var(--color-white);
+    position: relative;
+
+    color: var(--white);
+
+    overflow: hidden;
 
     background:
         radial-gradient(
-            circle at 80% 20%,
-            rgba(47, 143, 91, 0.24),
-            transparent 35%
+            circle at 82% 22%,
+            rgba(53, 168, 102, 0.20),
+            transparent 28%
         ),
         linear-gradient(
             135deg,
-            var(--color-navy),
-            var(--color-navy-light)
+            var(--navy-950),
+            var(--navy-900) 55%,
+            var(--navy-800)
+        );
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    right: -180px;
+    bottom: -220px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 40px rgba(255, 255, 255, 0.025),
+        0 0 0 80px rgba(255, 255, 255, 0.018);
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 6px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--brick-800),
+            var(--steel-300),
+            var(--green-500),
+            var(--steel-300),
+            var(--brick-800)
         );
 
-    overflow: hidden;
+    opacity: 0.75;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 .hero .hero-text {
@@ -203,9 +471,11 @@ p {
 
     margin-bottom: 34px;
 
-    color: rgba(255, 255, 255, 0.82);
+    color:
+        rgba(255, 255, 255, 0.78);
 
-    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    font-size:
+        clamp(1.05rem, 2vw, 1.3rem);
 }
 
 .hero-actions {
@@ -216,69 +486,20 @@ p {
 
 
 /* =========================================================
-   Buttons
+   Section backgrounds
    ========================================================= */
-
-.button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 52px;
-
-    padding:
-        0 22px;
-
-    border-radius: 999px;
-
-    font-weight: 800;
-
-    text-decoration: none;
-
-    transition:
-        transform 180ms ease,
-        background 180ms ease,
-        color 180ms ease;
-}
-
-.button:hover {
-    transform: translateY(-2px);
-}
-
-.button-primary {
-    color: var(--color-white);
-    background: var(--color-green);
-}
-
-.button-primary:hover {
-    background: var(--color-green-dark);
-}
-
-.button-secondary {
-    color: var(--color-white);
-
-    border:
-        1px solid rgba(255, 255, 255, 0.3);
-
-    background:
-        rgba(255, 255, 255, 0.08);
-}
-
-
-/* =========================================================
-   Sections
-   ========================================================= */
-
-main > section {
-    padding: 110px 0;
-}
 
 main > section:nth-child(even) {
-    background: var(--color-light);
+    background: var(--off-white);
 }
 
-main > section p {
-    color: var(--color-muted);
+main > section:nth-child(3n) {
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #eef1f3
+        );
 }
 
 
@@ -287,15 +508,42 @@ main > section p {
    ========================================================= */
 
 .site-footer {
-    padding: 70px 0;
+    position: relative;
 
-    color: rgba(255, 255, 255, 0.72);
+    padding: 80px 0;
 
-    background: var(--color-navy);
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy-950),
+            var(--navy-900)
+        );
+}
+
+.site-footer::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--brick-800),
+            var(--steel-500),
+            var(--green-500)
+        );
 }
 
 .site-footer strong {
-    color: var(--color-white);
+    color: var(--white);
 }
 
 
@@ -314,13 +562,12 @@ main > section p {
     }
 
     .hero {
-        min-height: 640px;
+        min-height: 650px;
     }
 
     main > section {
         padding: 80px 0;
     }
-
 }
 
 @media (max-width: 520px) {
@@ -333,7 +580,7 @@ main > section p {
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
 
     .hero-actions {
@@ -344,5 +591,4 @@ main > section p {
     .button {
         width: 100%;
     }
-
 }
