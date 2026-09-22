@@ -812,3 +812,106 @@ main > section:nth-child(3n) {
         min-height: 170px;
     }
 }
+
+/* =========================================================
+   Industrial Trust Strip
+   ========================================================= */
+
+.trust-strip {
+    position: relative;
+
+    padding: 0 !important;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy-950),
+            var(--steel-900)
+        ) !important;
+
+    overflow: hidden;
+}
+
+.trust-strip::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.16;
+
+    background:
+        repeating-linear-gradient(
+            135deg,
+            transparent 0,
+            transparent 42px,
+            rgba(255, 255, 255, 0.12) 43px,
+            transparent 44px
+        );
+}
+
+.trust-strip-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+}
+
+.trust-item {
+    min-height: 125px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 24px 28px;
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.12);
+}
+
+.trust-item:last-child {
+    border-right: 0;
+}
+
+.trust-item strong {
+    margin-bottom: 4px;
+
+    font-size: 1rem;
+}
+
+.trust-item span {
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 0.82rem;
+}
+
+@media (max-width: 700px) {
+
+    .trust-strip-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .trust-item {
+        min-height: 105px;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .trust-item:nth-child(2) {
+        border-right: 0;
+    }
+
+    .trust-item:nth-child(3),
+    .trust-item:nth-child(4) {
+        border-bottom: 0;
+    }
+}
