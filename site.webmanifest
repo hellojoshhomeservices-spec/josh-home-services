@@ -1,0 +1,8 @@
+{
+    "name": "Josh Home Services",
+    "short_name": "Josh Home Services",
+    "description": "Professional home services, maintenance, repairs and renovations in Pretoria.",
+    "lang": "en-ZA",
+    "start_url": "/josh-home-services/",
+    "display": "standalone"
+}
