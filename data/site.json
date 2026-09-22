@@ -1,0 +1,20 @@
+{
+    "business": {
+        "name": "Josh Home Services",
+        "tagline": "Professional. Reliable. Always Ready.",
+        "country": "South Africa",
+        "province": "Gauteng",
+        "primaryCity": "Pretoria"
+    },
+    "contact": {
+        "phonePrimary": "+27 62 713 2796",
+        "phoneSecondary": "+27 71 896 0359"
+    },
+    "location": {
+        "baseArea": "Pretoria East",
+        "suburb": "Garsfontein"
+    },
+    "website": {
+        "language": "en-ZA"
+    }
+}
