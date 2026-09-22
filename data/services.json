@@ -1,0 +1,111 @@
+{
+    "categories": [
+        {
+            "id": "property-maintenance",
+            "name": "Property Maintenance",
+            "description": "Practical maintenance, repair and property upkeep services.",
+            "services": [
+                {
+                    "id": "handyman",
+                    "name": "Handyman & General Maintenance"
+                },
+                {
+                    "id": "plumbing",
+                    "name": "Plumbing"
+                },
+                {
+                    "id": "electrical",
+                    "name": "Electrical"
+                },
+                {
+                    "id": "roofing",
+                    "name": "Roofing"
+                }
+            ]
+        },
+        {
+            "id": "renovation-construction",
+            "name": "Renovation & Construction",
+            "description": "Property improvement, renovation and construction work.",
+            "services": [
+                {
+                    "id": "renovations",
+                    "name": "Renovations"
+                },
+                {
+                    "id": "construction",
+                    "name": "Construction"
+                },
+                {
+                    "id": "carpentry",
+                    "name": "Carpentry"
+                },
+                {
+                    "id": "tiling",
+                    "name": "Tiling"
+                },
+                {
+                    "id": "painting",
+                    "name": "Painting"
+                }
+            ]
+        },
+        {
+            "id": "outdoor-property",
+            "name": "Outdoor & Property Improvements",
+            "description": "Outdoor improvements, landscaping and property preparation.",
+            "services": [
+                {
+                    "id": "paving",
+                    "name": "Paving"
+                },
+                {
+                    "id": "landscaping",
+                    "name": "Landscaping"
+                },
+                {
+                    "id": "gardening",
+                    "name": "Gardening"
+                },
+                {
+                    "id": "irrigation",
+                    "name": "Irrigation"
+                },
+                {
+                    "id": "tree-felling",
+                    "name": "Tree Felling"
+                },
+                {
+                    "id": "site-clearing",
+                    "name": "Site Clearing"
+                }
+            ]
+        },
+        {
+            "id": "steelwork",
+            "name": "Steel & Structural Work",
+            "description": "Practical steel, welding and property security work.",
+            "services": [
+                {
+                    "id": "welding",
+                    "name": "Welding & Steelwork"
+                },
+                {
+                    "id": "gates",
+                    "name": "Gates & Security"
+                }
+            ]
+        },
+        {
+            "id": "specialist-property-work",
+            "name": "Specialist Property Work",
+            "description": "Specialised property preparation and structural work.",
+            "services": [
+                {
+                    "id": "demolition",
+                    "name": "Demolition"
+                }
+            ]
+        }
+    ]
+}
