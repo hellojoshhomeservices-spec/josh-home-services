@@ -36,9 +36,16 @@
     >
 
     <link
-        rel="icon"
-        href="/josh-home-services/assets/icons/favicon.svg"
-        type="image/svg+xml"
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/josh-home-services/assets/images/brand/favicon-32.png"
+    >
+
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/josh-home-services/assets/images/brand/favicon-180.png"
     >
 
     <link
@@ -56,13 +63,20 @@
         defer
     ></script>
 
-    <script type="application/ld+json">
+   <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": "Josh Home Services",
     "description": "Professional home maintenance, repairs, renovations and property services in Pretoria.",
     "url": "https://hellohoshhomeservices-spec.github.io/josh-home-services/",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://hellohoshhomeservices-spec.github.io/josh-home-services/assets/images/brand/josh-home-services-logo.png",
+        "width": 768,
+        "height": 284
+    },
+    "image": "https://hellohoshhomeservices-spec.github.io/josh-home-services/assets/images/brand/josh-home-services-logo.png",
     "telephone": [
         "+27718960359"
     ],
@@ -78,6 +92,7 @@
     }
 }
 </script>
+</script>
     
 </head>
 
@@ -87,13 +102,19 @@
 
     <div class="container">
 
-        <a
-            class="site-logo"
-            href="/josh-home-services/"
-            aria-label="Josh Home Services home"
-        >
-            Josh Home Services
-        </a>
+<a
+    class="site-logo"
+    href="/josh-home-services/"
+    aria-label="Josh Home Services home"
+>
+    <img
+        src="/josh-home-services/assets/images/brand/josh-home-services-logo.png"
+        alt="Josh Home Services logo"
+        width="768"
+        height="284"
+        decoding="async"
+    >
+</a>
 
         <nav
             class="site-nav"
