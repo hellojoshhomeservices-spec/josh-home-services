@@ -1888,3 +1888,689 @@ section {
 .eyebrow {
     color: var(--green-500) !important;
 }
+
+/* =========================================================
+   JOSH HOME SERVICES
+   FINAL RESPONSIVE NAVIGATION SYSTEM
+   ========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    padding: 8px 0 !important;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+
+    background:
+        rgba(7, 21, 33, 0.94) !important;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.site-header .container,
+.site-header .header-inner {
+    width: min(calc(100% - 48px), 1440px);
+
+    min-height: 64px;
+
+    margin-inline: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+
+/* ---------------------------------------------------------
+   LOGO
+   --------------------------------------------------------- */
+
+.site-logo {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    flex: 0 0 auto;
+
+    width: auto;
+
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+}
+
+.site-logo img {
+    display: block;
+
+    width: 140px;
+    height: auto;
+
+    max-width: 140px;
+    max-height: 52px;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 5px 18px rgba(0, 0, 0, 0.30),
+        0 0 24px rgba(46, 214, 139, 0.12);
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.site-logo:hover img {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.14),
+        0 7px 22px rgba(0, 0, 0, 0.34),
+        0 0 30px rgba(46, 214, 139, 0.18);
+}
+
+
+/* ---------------------------------------------------------
+   RIGHT SIDE
+   --------------------------------------------------------- */
+
+.header-right {
+    min-width: 0;
+
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: clamp(14px, 1.8vw, 28px);
+}
+
+
+/* ---------------------------------------------------------
+   DESKTOP NAVIGATION
+   --------------------------------------------------------- */
+
+.desktop-nav {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: clamp(14px, 1.7vw, 26px);
+
+    white-space: nowrap;
+}
+
+.desktop-nav a {
+    position: relative;
+
+    flex: 0 0 auto;
+
+    color: rgba(255, 255, 255, 0.78) !important;
+
+    font-size: clamp(0.76rem, 0.85vw, 0.92rem);
+
+    font-weight: 750;
+
+    text-decoration: none;
+
+    transition: color 180ms ease;
+}
+
+.desktop-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 100%;
+
+    bottom: -7px;
+
+    height: 2px;
+
+    border-radius: 999px;
+
+    background: var(--green-500);
+
+    transition: right 180ms ease;
+}
+
+.desktop-nav a:hover {
+    color: #ffffff !important;
+}
+
+.desktop-nav a:hover::after {
+    right: 0;
+}
+
+
+/* ---------------------------------------------------------
+   DESKTOP QUOTE BUTTON
+   --------------------------------------------------------- */
+
+.header-quote {
+    flex: 0 0 auto;
+
+    min-height: 42px;
+
+    padding: 0 17px;
+
+    font-size: 0.78rem;
+
+    font-weight: 850;
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   HAMBURGER BUTTON
+   Hidden on large screens.
+   --------------------------------------------------------- */
+
+.menu-toggle {
+    display: none;
+
+    width: 46px;
+    height: 46px;
+
+    flex: 0 0 46px;
+
+    padding: 0;
+
+    border: 1px solid rgba(46, 214, 139, 0.30);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.07),
+        0 8px 24px rgba(0, 0, 0, 0.20);
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    transition:
+        background 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    border-radius: 999px;
+
+    background: var(--green-500);
+
+    box-shadow:
+        0 0 8px rgba(46, 214, 139, 0.25);
+
+    transition:
+        transform 180ms ease,
+        opacity 180ms ease;
+}
+
+.menu-toggle:hover {
+    border-color: rgba(46, 214, 139, 0.65);
+
+    background:
+        rgba(46, 214, 139, 0.08);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 8px 28px rgba(0, 0, 0, 0.24),
+        0 0 20px rgba(46, 214, 139, 0.10);
+}
+
+
+/* ---------------------------------------------------------
+   HAMBURGER → X
+   --------------------------------------------------------- */
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE MENU
+   --------------------------------------------------------- */
+
+.mobile-menu {
+    width: min(calc(100% - 24px), 520px);
+
+    margin: 10px auto 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(14, 39, 55, 0.98),
+            rgba(7, 21, 33, 0.98)
+        );
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.42),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07);
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transform: translateY(-8px);
+
+    transition:
+        opacity 220ms ease,
+        transform 220ms ease;
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-menu nav {
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 8px;
+}
+
+.mobile-menu nav a {
+    display: flex;
+
+    align-items: center;
+
+    min-height: 54px;
+
+    padding: 0 18px;
+
+    border-radius: 11px;
+
+    color: rgba(255, 255, 255, 0.86);
+
+    font-size: 0.95rem;
+
+    font-weight: 750;
+
+    text-decoration: none;
+
+    transition:
+        color 180ms ease,
+        background 180ms ease,
+        padding-left 180ms ease;
+}
+
+.mobile-menu nav a:hover {
+    color: #ffffff;
+
+    padding-left: 22px;
+
+    background:
+        rgba(46, 214, 139, 0.08);
+}
+
+.mobile-menu .mobile-menu-quote {
+    margin-top: 8px;
+
+    justify-content: center;
+
+    color: #06151f;
+
+    background: var(--green-500);
+
+    box-shadow:
+        0 8px 24px rgba(46, 214, 139, 0.18);
+}
+
+.mobile-menu .mobile-menu-quote:hover {
+    color: #06151f;
+
+    padding-left: 18px;
+
+    background: var(--green-500);
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1101px) {
+
+    .desktop-nav {
+        display: flex;
+    }
+
+    .header-quote {
+        display: inline-flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP SPLIT-SCREEN
+   TABLET LANDSCAPE
+   TABLET PORTRAIT
+   PHONE LANDSCAPE
+   PHONE PORTRAIT
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .site-header .container,
+    .site-header .header-inner {
+        width: calc(100% - 32px);
+
+        min-height: 60px;
+
+        gap: 14px;
+    }
+
+    .desktop-nav,
+    .header-quote {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Laptop split / smaller tablets
+   --------------------------------------------------------- */
+
+@media (min-width: 701px) and (max-width: 1100px) {
+
+    .site-logo img {
+        width: 126px;
+
+        max-width: 126px;
+
+        max-height: 48px;
+    }
+
+    .menu-toggle {
+        width: 46px;
+        height: 46px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Phone landscape
+   --------------------------------------------------------- */
+
+@media (max-width: 800px) and (orientation: landscape) {
+
+    .site-header {
+        padding: 5px 0 !important;
+    }
+
+    .site-header .container,
+    .site-header .header-inner {
+        width: calc(100% - 24px);
+
+        min-height: 52px;
+    }
+
+    .site-logo img {
+        width: 108px;
+
+        max-width: 108px;
+
+        max-height: 40px;
+    }
+
+    .menu-toggle {
+        width: 42px;
+        height: 42px;
+
+        flex-basis: 42px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Phone portrait
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) and (orientation: portrait) {
+
+    .site-header {
+        padding: 6px 0 !important;
+    }
+
+    .site-header .container,
+    .site-header .header-inner {
+        width: calc(100% - 20px);
+
+        min-height: 56px;
+    }
+
+    .site-logo img {
+        width: 108px;
+
+        max-width: 108px;
+
+        max-height: 40px;
+    }
+
+    .menu-toggle {
+        width: 46px;
+        height: 46px;
+
+        flex-basis: 46px;
+
+        border-radius: 12px;
+    }
+
+    .mobile-menu {
+        width: calc(100% - 20px);
+
+        margin-top: 8px;
+
+        margin-bottom: 10px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Very small phones
+   --------------------------------------------------------- */
+
+@media (max-width: 380px) and (orientation: portrait) {
+
+    .site-header .container,
+    .site-header .header-inner {
+        width: calc(100% - 16px);
+    }
+
+    .site-logo img {
+        width: 98px;
+
+        max-width: 98px;
+
+        max-height: 36px;
+    }
+
+    .menu-toggle {
+        width: 42px;
+        height: 42px;
+
+        flex-basis: 42px;
+    }
+
+    .mobile-menu nav a {
+        min-height: 52px;
+
+        font-size: 0.92rem;
+    }
+}
+
+
+/* =========================================================
+   GLOBAL DARK PROPERTY ENVIRONMENT
+   ========================================================= */
+
+html,
+body {
+    background: #071521 !important;
+}
+
+body {
+    color: var(--white) !important;
+
+    background:
+        radial-gradient(
+            circle at 18% 12%,
+            rgba(46, 214, 139, 0.11),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 82% 48%,
+            rgba(46, 214, 139, 0.07),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #071521 0%,
+            #091c2b 48%,
+            #0b2434 100%
+        ) !important;
+
+    background-attachment: fixed;
+}
+
+main > section,
+main > section:nth-child(even),
+main > section:nth-child(3n) {
+    background: transparent !important;
+}
+
+.services-section,
+.areas-section,
+.projects-section,
+.guides-section,
+.contact-section,
+.material-section {
+    color: var(--white) !important;
+
+    background: transparent !important;
+}
+
+.services-section h2,
+.areas-section h2,
+.projects-section h2,
+.guides-section h2,
+.contact-section h2 {
+    color: #ffffff !important;
+}
+
+.services-section p,
+.areas-section p,
+.projects-section p,
+.guides-section p,
+.contact-section p {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.service-card,
+.areas-panel {
+    border: 1px solid rgba(255, 255, 255, 0.11) !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.075),
+            rgba(255, 255, 255, 0.025)
+        ) !important;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.service-card h3,
+.service-card-content h3,
+.area-group strong {
+    color: #ffffff !important;
+}
+
+.service-card-content > p:not(.service-card-label),
+.area-group p {
+    color: rgba(255, 255, 255, 0.64) !important;
+}
+
+.service-card a {
+    color: var(--green-500) !important;
+}
+
+main > section {
+    padding-top: 110px !important;
+    padding-bottom: 110px !important;
+}
+
+@media (max-width: 700px) {
+
+    main > section {
+        padding-top: 78px !important;
+        padding-bottom: 78px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    main > section {
+        padding-top: 64px !important;
+        padding-bottom: 64px !important;
+    }
+}
