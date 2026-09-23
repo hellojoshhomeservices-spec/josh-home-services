@@ -98,45 +98,85 @@
 <body>
 
     <header class="site-header">
-
-    <div class="container">
-
-<a
-    class="site-logo"
-    href="/josh-home-services/"
-    aria-label="Josh Home Services home"
->
-    <img
-        src="/josh-home-services/assets/images/brand/josh-home-services-logo.png"
-        alt="Josh Home Services logo"
-        width="768"
-        height="284"
-        decoding="async"
-    >
-</a>
-
-        <nav
-            class="site-nav"
-            aria-label="Primary navigation"
-        >
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#areas">Areas</a>
-            <a href="#guides">Advice</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <div class="container header-inner">
 
         <a
-            href="#contact"
-            class="button button-primary"
+            class="site-logo"
+            href="/josh-home-services/"
+            aria-label="Josh Home Services home"
         >
-            Request a Quote
+            <img
+                src="/josh-home-services/assets/images/brand/josh-home-services-logo.png"
+                alt="Josh Home Services"
+                width="768"
+                height="284"
+                decoding="async"
+            >
         </a>
+
+        <div class="header-right">
+
+            <nav
+                class="site-nav desktop-nav"
+                aria-label="Primary navigation"
+            >
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#areas">Areas We Serve</a>
+                <a href="#guides">Advice</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a
+                href="#contact"
+                class="button button-primary header-quote"
+            >
+                Request a Quote
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
 
     </div>
 
-</header>
+    <div
+        class="mobile-menu"
+        id="mobile-menu"
+        hidden
+    >
+        <nav aria-label="Mobile navigation">
 
+            <a href="#services">Services</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#areas">Areas We Serve</a>
+
+            <a href="#guides">Advice &amp; Guides</a>
+
+            <a href="#contact">Contact</a>
+
+            <a
+                href="#contact"
+                class="mobile-menu-quote"
+            >
+                Request a Quote
+            </a>
+
+        </nav>
+    </div>
+</header>
     <main>
 
         <section class="hero material-texture">
