@@ -1431,7 +1431,7 @@ main > section:nth-child(3n) {
     .material-panel {
         min-height: 420px;
     }
-
+    }
    /* =========================================================
    Official Josh Home Services Header Logo
    ========================================================= */
@@ -3226,4 +3226,357 @@ main > section {
 .site-header a {
     -webkit-text-decoration-skip-ink: none;
     text-decoration-skip-ink: none;
+}
+
+/* =========================================================
+   FINAL JOSH HOME SERVICES HEADER
+   ========================================================= */
+
+.site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+
+    width: 100% !important;
+    padding: 8px 0 !important;
+
+    border: 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+
+    background: rgba(5,18,30,0.96) !important;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.20) !important;
+
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+}
+
+.site-header .container,
+.site-header .header-inner {
+    width: min(calc(100% - 64px), 1440px) !important;
+    min-height: 64px !important;
+
+    margin-inline: auto !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    gap: 24px !important;
+
+    box-sizing: border-box !important;
+}
+
+.site-header .site-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+
+    flex: 0 0 auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-decoration: none !important;
+}
+
+.site-header .site-logo img {
+    display: block !important;
+
+    width: 142px !important;
+    max-width: 142px !important;
+    max-height: 52px !important;
+
+    height: auto !important;
+
+    object-fit: contain !important;
+
+    border-radius: 9px !important;
+
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,0.08),
+        0 5px 18px rgba(0,0,0,0.28) !important;
+}
+
+.site-header .header-right {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+
+    flex: 1 1 auto !important;
+
+    min-width: 0 !important;
+
+    gap: 28px !important;
+
+    margin-left: auto !important;
+}
+
+.site-header .desktop-nav {
+    display: flex !important;
+    align-items: center !important;
+
+    gap: clamp(18px, 1.8vw, 30px) !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.site-header .desktop-nav a {
+    display: inline-flex !important;
+    align-items: center !important;
+
+    min-height: 42px !important;
+
+    color: rgba(255,255,255,0.88) !important;
+
+    font-size: 0.90rem !important;
+    font-weight: 760 !important;
+
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+.site-header .desktop-nav a::before,
+.site-header .desktop-nav a::after {
+    display: none !important;
+    content: none !important;
+}
+
+.site-header .desktop-nav a:hover {
+    color: #2ed68b !important;
+}
+
+.site-header .header-quote {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    min-height: 42px !important;
+
+    padding: 0 18px !important;
+    margin: 0 !important;
+
+    border-radius: 999px !important;
+
+    color: #fff !important;
+
+    background:
+        linear-gradient(135deg,#2ed68b,#23975f) !important;
+
+    white-space: nowrap !important;
+}
+
+.site-header .menu-toggle {
+    display: none !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 46px !important;
+    height: 46px !important;
+
+    flex: 0 0 46px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 1px solid rgba(46,214,139,0.35) !important;
+    border-radius: 14px !important;
+
+    background: rgba(8,31,43,0.88) !important;
+
+    cursor: pointer !important;
+}
+
+.site-header .menu-toggle span {
+    display: block !important;
+
+    width: 22px !important;
+    height: 2px !important;
+
+    margin: 3px 0 !important;
+
+    border-radius: 999px !important;
+
+    background: #2ed68b !important;
+
+    box-shadow: 0 0 8px rgba(46,214,139,0.40) !important;
+}
+
+.site-header .mobile-menu {
+    box-sizing: border-box !important;
+
+    width: min(calc(100% - 32px),520px) !important;
+
+    margin: 8px auto 12px !important;
+    padding: 8px !important;
+
+    border: 1px solid rgba(255,255,255,0.10) !important;
+    border-radius: 18px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8,28,43,0.99),
+            rgba(7,21,34,0.99)
+        ) !important;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.34) !important;
+}
+
+.site-header .mobile-menu[hidden] {
+    display: none !important;
+}
+
+.site-header .mobile-menu nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+}
+
+.site-header .mobile-menu a {
+    display: flex !important;
+    align-items: center !important;
+
+    min-height: 48px !important;
+
+    padding: 0 16px !important;
+
+    border-radius: 12px !important;
+
+    color: rgba(255,255,255,0.90) !important;
+
+    font-weight: 720 !important;
+
+    text-decoration: none !important;
+}
+
+.site-header .mobile-menu .mobile-menu-quote {
+    justify-content: center !important;
+
+    margin-top: 6px !important;
+
+    color: #fff !important;
+
+    background:
+        linear-gradient(135deg,#2ed68b,#23975f) !important;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1201px) {
+
+    .site-header .desktop-nav,
+    .site-header .header-quote {
+        display: flex !important;
+    }
+
+    .site-header .menu-toggle,
+    .site-header .mobile-menu {
+        display: none !important;
+    }
+}
+
+
+/* =========================================================
+   COMPACT: SPLIT SCREEN / TABLET / PHONE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .site-header .container,
+    .site-header .header-inner {
+        width: calc(100% - 40px) !important;
+        min-height: 60px !important;
+    }
+
+    .site-header .desktop-nav,
+    .site-header .header-quote {
+        display: none !important;
+    }
+
+    .site-header .menu-toggle {
+        display: flex !important;
+    }
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .site-header .container,
+    .site-header .header-inner {
+        width: calc(100% - 24px) !important;
+        min-height: 58px !important;
+    }
+
+    .site-header .site-logo img {
+        width: 126px !important;
+        max-width: 126px !important;
+        max-height: 48px !important;
+    }
+
+    .site-header .menu-toggle {
+        width: 44px !important;
+        height: 44px !important;
+        flex-basis: 44px !important;
+    }
+}
+
+
+/* =========================================================
+   PHONE LANDSCAPE
+   ========================================================= */
+
+@media (max-width: 800px) and (orientation: landscape) {
+
+    .site-header .container,
+    .site-header .header-inner {
+        width: calc(100% - 24px) !important;
+        min-height: 50px !important;
+    }
+
+    .site-header {
+        padding: 4px 0 !important;
+    }
+
+    .site-header .site-logo img {
+        width: 108px !important;
+        max-width: 108px !important;
+        max-height: 40px !important;
+    }
+
+    .site-header .menu-toggle {
+        width: 42px !important;
+        height: 42px !important;
+        flex-basis: 42px !important;
+    }
+}
+
+.services-section,
+.areas-section,
+.guides-section,
+.contact-section,
+.projects-section {
+    color: #ffffff !important;
+
+    background:
+        transparent !important;
+}
+
+.services-section h2,
+.areas-section h2,
+.guides-section h2,
+.contact-section h2,
+.projects-section h2,
+.services-section h3,
+.areas-section h3 {
+    color: #ffffff !important;
 }
