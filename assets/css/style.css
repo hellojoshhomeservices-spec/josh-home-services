@@ -2574,3 +2574,656 @@ main > section {
         padding-bottom: 64px !important;
     }
 }
+
+/* =========================================================
+   JOSH HOME SERVICES
+   FINAL RESPONSIVE HEADER SYSTEM
+   ========================================================= */
+
+/*
+   This is the single authoritative header system.
+
+   Desktop:
+   > 1200px
+   Logo + full navigation + Request a Quote
+
+   Compact:
+   <= 1200px
+   Logo + hamburger
+
+   Mobile:
+   <= 700px
+   Smaller logo + hamburger
+
+   Phone landscape:
+   <= 800px landscape
+   Compact horizontal header
+*/
+
+
+/* =========================================================
+   HEADER FOUNDATION
+   ========================================================= */
+
+.site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+
+    width: 100% !important;
+
+    padding: 8px 0 !important;
+
+    border: 0 !important;
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08) !important;
+
+    background:
+        rgba(5, 18, 30, 0.94) !important;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18) !important;
+
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+}
+
+
+/* =========================================================
+   HEADER INNER
+   ========================================================= */
+
+.site-header .container,
+.site-header .header-inner {
+    box-sizing: border-box !important;
+
+    width:
+        min(calc(100% - 64px), 1440px) !important;
+
+    min-height: 64px !important;
+
+    margin-inline: auto !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    gap: 24px !important;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.site-header .site-logo {
+    display: inline-flex !important;
+
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    flex: 0 0 auto !important;
+
+    width: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: inherit !important;
+
+    text-decoration: none !important;
+}
+
+
+.site-header .site-logo img {
+    display: block !important;
+
+    width: 142px !important;
+    max-width: 142px !important;
+
+    height: auto !important;
+    max-height: 52px !important;
+
+    object-fit: contain !important;
+
+    border-radius: 9px !important;
+
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 5px 18px rgba(0, 0, 0, 0.28),
+        0 0 22px rgba(46, 214, 139, 0.10) !important;
+
+    transform: none !important;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease !important;
+}
+
+
+.site-header .site-logo:hover img {
+    transform: translateY(-1px) !important;
+
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.14),
+        0 7px 22px rgba(0, 0, 0, 0.34),
+        0 0 28px rgba(46, 214, 139, 0.16) !important;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.site-header .header-right {
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: flex-end !important;
+
+    flex: 1 1 auto !important;
+
+    min-width: 0 !important;
+
+    gap: 28px !important;
+
+    margin-left: auto !important;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
+.site-header .desktop-nav,
+.site-header .site-nav {
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: clamp(18px, 1.8vw, 30px) !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+.site-header .desktop-nav a,
+.site-header .site-nav a {
+    position: relative !important;
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+
+    min-height: 42px !important;
+
+    padding: 0 !important;
+
+    color:
+        rgba(255, 255, 255, 0.88) !important;
+
+    font-size: 0.90rem !important;
+
+    font-weight: 760 !important;
+
+    line-height: 1.2 !important;
+
+    text-decoration: none !important;
+
+    white-space: nowrap !important;
+
+    transition:
+        color 180ms ease !important;
+}
+
+
+.site-header .desktop-nav a::after,
+.site-header .site-nav a::after {
+    content: none !important;
+}
+
+
+.site-header .desktop-nav a:hover,
+.site-header .site-nav a:hover {
+    color: #2ed68b !important;
+}
+
+
+/* =========================================================
+   DESKTOP QUOTE BUTTON
+   ========================================================= */
+
+.site-header .header-quote {
+    display: inline-flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex: 0 0 auto !important;
+
+    min-height: 42px !important;
+
+    padding:
+        0 18px !important;
+
+    margin: 0 !important;
+
+    border-radius: 999px !important;
+
+    color: #ffffff !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2ed68b,
+            #23975f
+        ) !important;
+
+    box-shadow:
+        0 9px 24px rgba(46, 214, 139, 0.18) !important;
+
+    white-space: nowrap !important;
+}
+
+
+/* =========================================================
+   HAMBURGER
+   ========================================================= */
+
+.site-header .menu-toggle {
+    display: none;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex: 0 0 46px !important;
+
+    width: 46px !important;
+    height: 46px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border:
+        1px solid rgba(46, 214, 139, 0.35) !important;
+
+    border-radius: 14px !important;
+
+    background:
+        rgba(8, 31, 43, 0.82) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.07),
+        0 8px 22px rgba(0, 0, 0, 0.20) !important;
+
+    cursor: pointer !important;
+
+    appearance: none !important;
+    -webkit-appearance: none !important;
+}
+
+
+.site-header .menu-toggle span {
+    display: block !important;
+
+    width: 22px !important;
+    height: 2px !important;
+
+    margin: 3px 0 !important;
+
+    border-radius: 999px !important;
+
+    background: #2ed68b !important;
+
+    box-shadow:
+        0 0 8px rgba(46, 214, 139, 0.40) !important;
+
+    transition:
+        transform 200ms ease,
+        opacity 200ms ease !important;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.site-header .mobile-menu {
+    box-sizing: border-box !important;
+
+    width:
+        min(calc(100% - 32px), 520px) !important;
+
+    margin:
+        8px auto 12px !important;
+
+    padding: 8px !important;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10) !important;
+
+    border-radius: 18px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8, 28, 43, 0.98),
+            rgba(7, 21, 34, 0.98)
+        ) !important;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.34),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+
+    opacity: 0 !important;
+
+    transform:
+        translateY(-8px) !important;
+
+    transition:
+        opacity 180ms ease,
+        transform 220ms ease !important;
+}
+
+
+.site-header .mobile-menu[hidden] {
+    display: none !important;
+}
+
+
+.site-header .mobile-menu.is-open {
+    opacity: 1 !important;
+
+    transform:
+        translateY(0) !important;
+}
+
+
+.site-header .mobile-menu nav {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    gap: 2px !important;
+}
+
+
+.site-header .mobile-menu a {
+    display: flex !important;
+
+    align-items: center !important;
+
+    min-height: 48px !important;
+
+    padding:
+        0 16px !important;
+
+    border-radius: 12px !important;
+
+    color:
+        rgba(255, 255, 255, 0.90) !important;
+
+    font-size: 0.96rem !important;
+
+    font-weight: 720 !important;
+
+    text-decoration: none !important;
+
+    transition:
+        background 160ms ease,
+        color 160ms ease !important;
+}
+
+
+.site-header .mobile-menu a:hover {
+    color: #ffffff !important;
+
+    background:
+        rgba(46, 214, 139, 0.10) !important;
+}
+
+
+.site-header .mobile-menu .mobile-menu-quote {
+    justify-content: center !important;
+
+    margin-top: 6px !important;
+
+    color: #ffffff !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2ed68b,
+            #23975f
+        ) !important;
+
+    box-shadow:
+        0 8px 22px rgba(46, 214, 139, 0.16) !important;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1201px) {
+
+    .site-header .desktop-nav {
+        display: flex !important;
+    }
+
+    .site-header .header-quote {
+        display: inline-flex !important;
+    }
+
+    .site-header .menu-toggle {
+        display: none !important;
+    }
+
+    .site-header .mobile-menu {
+        display: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   LAPTOP SPLIT SCREEN / TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .site-header .container,
+    .site-header .header-inner {
+        width:
+            calc(100% - 40px) !important;
+
+        min-height: 60px !important;
+    }
+
+    .site-header .desktop-nav,
+    .site-header .site-nav,
+    .site-header .header-quote {
+        display: none !important;
+    }
+
+    .site-header .menu-toggle {
+        display: flex !important;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (min-width: 701px) and (max-width: 1200px) {
+
+    .site-header {
+        padding: 7px 0 !important;
+    }
+
+    .site-header .site-logo img {
+        width: 126px !important;
+        max-width: 126px !important;
+        max-height: 48px !important;
+    }
+
+    .site-header .menu-toggle {
+        width: 46px !important;
+        height: 46px !important;
+        flex-basis: 46px !important;
+    }
+
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        padding: 6px 0 !important;
+    }
+
+    .site-header .container,
+    .site-header .header-inner {
+        width:
+            calc(100% - 24px) !important;
+
+        min-height: 58px !important;
+    }
+
+    .site-header .site-logo img {
+        width: 126px !important;
+        max-width: 126px !important;
+        max-height: 48px !important;
+    }
+
+    .site-header .menu-toggle {
+        width: 44px !important;
+        height: 44px !important;
+        flex-basis: 44px !important;
+    }
+
+    .site-header .mobile-menu {
+        width:
+            calc(100% - 24px) !important;
+
+        margin-top: 6px !important;
+    }
+
+}
+
+
+/* =========================================================
+   PHONE LANDSCAPE
+   ========================================================= */
+
+@media (max-width: 800px) and (orientation: landscape) {
+
+    .site-header {
+        padding: 4px 0 !important;
+    }
+
+    .site-header .container,
+    .site-header .header-inner {
+        width:
+            calc(100% - 24px) !important;
+
+        min-height: 50px !important;
+    }
+
+    .site-header .site-logo img {
+        width: 108px !important;
+        max-width: 108px !important;
+        max-height: 40px !important;
+    }
+
+    .site-header .menu-toggle {
+        width: 42px !important;
+        height: 42px !important;
+        flex-basis: 42px !important;
+    }
+
+    .site-header .mobile-menu {
+        width:
+            min(calc(100% - 24px), 520px) !important;
+
+        margin-top: 6px !important;
+    }
+
+}
+
+
+/* =========================================================
+   FINAL HEADER CASCADE LOCK
+   ========================================================= */
+
+.site-header,
+.site-header *,
+.site-header *::before,
+.site-header *::after {
+    box-sizing: border-box !important;
+}
+
+.site-header .header-right {
+    flex-shrink: 0 !important;
+}
+
+.site-header .desktop-nav {
+    flex-shrink: 1 !important;
+}
+
+.site-header .site-logo {
+    flex-shrink: 0 !important;
+}
+
+
+/* Never allow the legacy light header to return. */
+
+.site-header {
+    color: #ffffff !important;
+
+    background-color:
+        #071522 !important;
+}
+
+
+/* Prevent old navigation pseudo-elements from appearing. */
+
+.site-header .site-nav a::before,
+.site-header .site-nav a::after,
+.site-header .desktop-nav a::before,
+.site-header .desktop-nav a::after {
+    display: none !important;
+    content: none !important;
+}
+
+
+/* Remove accidental legacy borders / shadows from header children. */
+
+.site-header .site-logo,
+.site-header .desktop-nav,
+.site-header .header-right {
+    border: 0 !important;
+}
+
+
+/* Keep the navigation readable on the dark surface. */
+
+.site-header a {
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+}
