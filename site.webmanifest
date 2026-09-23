@@ -4,5 +4,18 @@
     "description": "Professional home services, maintenance, repairs and renovations in Pretoria.",
     "lang": "en-ZA",
     "start_url": "/josh-home-services/",
-    "display": "standalone"
+    "scope": "/josh-home-services/",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/josh-home-services/assets/images/brand/favicon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/josh-home-services/assets/images/brand/favicon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
 }
