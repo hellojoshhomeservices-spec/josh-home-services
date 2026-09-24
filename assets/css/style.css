@@ -3580,3 +3580,163 @@ main > section {
 .areas-section h3 {
     color: #ffffff !important;
 }
+
+/* =========================================================
+   Josh Home Services — Cinematic Handyman Hero
+   ========================================================= */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-height: 720px;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 20, 34, 0.96) 0%,
+            rgba(5, 27, 42, 0.88) 34%,
+            rgba(5, 38, 48, 0.68) 62%,
+            rgba(4, 24, 34, 0.48) 100%
+        ),
+        radial-gradient(
+            circle at 78% 42%,
+            rgba(46, 214, 139, 0.20),
+            transparent 34%
+        ),
+        url("/josh-home-services/assets/images/hero/hero-handyman-background.png")
+        68% center / cover no-repeat !important;
+}
+
+/* Emerald brand glow over the photograph */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 78% 40%,
+            rgba(46, 214, 139, 0.18),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(4, 24, 39, 0.18),
+            rgba(5, 48, 52, 0.12)
+        );
+
+    opacity: 1;
+}
+
+/* Keep the branded lower edge */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 5px;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--brick-800),
+            var(--steel-300),
+            var(--green-500),
+            var(--steel-300),
+            var(--brick-800)
+        );
+
+    opacity: 0.85;
+}
+
+/* Keep all hero content above the photograph and overlays */
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Strong readability against the photographic background */
+
+.hero h1 {
+    max-width: 850px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 3px 20px rgba(0, 0, 0, 0.42);
+}
+
+.hero .eyebrow {
+    color: var(--green-400);
+
+    text-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.hero .hero-text {
+    color: rgba(255, 255, 255, 0.84);
+
+    text-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.34);
+}
+
+/* =========================================================
+   Hero — Responsive Image Positioning
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        min-height: 680px;
+
+        background-position:
+            72% center !important;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: 650px;
+
+        background-position:
+            74% center !important;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(4, 20, 34, 0.97) 0%,
+                rgba(5, 27, 42, 0.88) 48%,
+                rgba(5, 38, 48, 0.64) 100%
+            ),
+            radial-gradient(
+                circle at 76% 42%,
+                rgba(46, 214, 139, 0.18),
+                transparent 36%
+            ),
+            url("/josh-home-services/assets/images/hero/hero-handyman-background.png")
+            74% center / cover no-repeat !important;
+    }
+
+}
