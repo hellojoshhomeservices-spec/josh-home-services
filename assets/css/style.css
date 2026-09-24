@@ -2347,26 +2347,6 @@ main > section {
 
 }
 
-/* =========================================================
-   Phone Landscape
-   ========================================================= */
-    .site-header {
-        padding: 4px 0 !important;
-    }
-
-    .site-header .site-logo img {
-        width: 108px !important;
-        max-width: 108px !important;
-        max-height: 40px !important;
-    }
-
-    .site-header .menu-toggle {
-        width: 42px !important;
-        height: 42px !important;
-        flex-basis: 42px !important;
-    }
-}
-
 .services-section,
 .areas-section,
 .guides-section,
