@@ -953,15 +953,6 @@ p {
    Areas
    ========================================================= */
 
-.areas-section {
-    background:
-        linear-gradient(
-            135deg,
-            #f8f9f9,
-            #e5e9eb
-        ) !important;
-}
-
 .areas-layout {
     display: grid;
 
@@ -1235,23 +1226,6 @@ p {
     }
     }
    
-/* =========================================================
-   Concrete Service Surface
-   ========================================================= */
-
-.services-section {
-    background:
-        linear-gradient(
-            135deg,
-            #eef0f1,
-            #dfe3e5
-        ) !important;
-}
-
-    .material-content {
-        padding: 32px;
-    }
-
  /* =========================================================
    Painted Navy Surface
    ========================================================= */
@@ -1574,32 +1548,6 @@ section {
 }
 
 /* =========================================================
-   Small Phone System
-   ========================================================= */
-    .site-logo img {
-        width: 98px;
-
-        max-width: 98px;
-
-        max-height: 36px;
-    }
-
-    .menu-toggle {
-        width: 42px;
-        height: 42px;
-
-        flex-basis: 42px;
-    }
-
-    .mobile-menu nav a {
-        min-height: 52px;
-
-        font-size: 0.92rem;
-    }
-}
-
-
-/* =========================================================
    GLOBAL DARK PROPERTY ENVIRONMENT
    ========================================================= */
 
@@ -1782,7 +1730,7 @@ main > section {
     width:
         min(calc(100% - 64px), 1440px) !important;
 
-    min-height: 64px !important;
+    min-height: 72px !important;
 
     margin-inline: auto !important;
 
@@ -1821,11 +1769,11 @@ main > section {
 .site-header .site-logo img {
     display: block;
 
-    width: 172px !important;
+    width: 210px !important;
     height: auto !important;
 
-    max-width: 172px !important;
-    max-height: 62px !important;
+    max-width: 210px !important;
+    max-height: 72px !important;
 
     object-fit: contain !important;
 
@@ -2234,9 +2182,9 @@ main > section {
 @media (max-width: 1200px) {
 
     .site-header .site-logo img {
-        width: 126px !important;
-        max-width: 126px !important;
-        max-height: 48px !important;
+        width: 160px !important;
+        max-width: 160px !important;
+        max-height: 58px !important;
     }
 
 }
@@ -2249,12 +2197,6 @@ main > section {
 
     .site-header {
         padding: 7px 0 !important;
-    }
-
-    .site-header .site-logo img {
-        width: 126px !important;
-        max-width: 126px !important;
-        max-height: 48px !important;
     }
 
     .site-header .menu-toggle {
@@ -2285,10 +2227,10 @@ main > section {
     }
 
     .site-header .site-logo img {
-        width: 126px !important;
-        max-width: 126px !important;
-        max-height: 48px !important;
-    }
+    width: 148px !important;
+    max-width: 148px !important;
+    max-height: 54px !important;
+}
 
     .site-header .menu-toggle {
     width: 44px !important;
@@ -2326,9 +2268,9 @@ main > section {
     }
 
     .site-header .site-logo img {
-        width: 108px !important;
-        max-width: 108px !important;
-        max-height: 40px !important;
+        width: 132px !important;
+        max-width: 132px !important;
+        max-height: 50px !important;
     }
 
     .site-header .menu-toggle {
@@ -2345,27 +2287,6 @@ main > section {
         margin-top: 6px !important;
     }
 
-}
-
-.services-section,
-.areas-section,
-.guides-section,
-.contact-section,
-.projects-section {
-    color: #ffffff !important;
-
-    background:
-        transparent !important;
-}
-
-.services-section h2,
-.areas-section h2,
-.guides-section h2,
-.contact-section h2,
-.projects-section h2,
-.services-section h3,
-.areas-section h3 {
-    color: #ffffff !important;
 }
 
 /* =========================================================
@@ -2474,7 +2395,7 @@ main > section {
 }
 
 .hero .eyebrow {
-    color: var(--green-400);
+    color: var(--green-500);
 
     text-shadow:
         0 2px 12px rgba(0, 0, 0, 0.35);
