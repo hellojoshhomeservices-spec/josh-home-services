@@ -632,12 +632,12 @@ p {
     display: none;
 }
 
-
 /* ---------------------------------------------------------
    Text over image
    --------------------------------------------------------- */
 
-.service-card-content {
+.service-card-content,
+.service-card-image-content {
     position: absolute;
 
     left: 0;
@@ -647,25 +647,25 @@ p {
     z-index: 5;
 
     display: block;
-
     visibility: visible;
     opacity: 1;
 
-    padding:
-        28px;
+    padding: 28px;
 
     background: transparent !important;
 
     color: var(--white) !important;
 }
 
-.service-card-content h3 {
+.service-card-content h3,
+.service-card-image-content h3 {
     margin-bottom: 12px;
 
     color: var(--white) !important;
 }
 
-.service-card-label {
+.service-card-content .service-card-label,
+.service-card-image-content .service-card-label {
     margin-bottom: 10px;
 
     color: var(--green-700) !important;
@@ -679,14 +679,16 @@ p {
     text-transform: uppercase;
 }
 
-.service-card-content > p:not(.service-card-label) {
+.service-card-content > p:not(.service-card-label),
+.service-card-image-content > p:not(.service-card-label) {
     margin-bottom: 22px;
 
     color:
         rgba(255, 255, 255, 0.88) !important;
 }
 
-.service-card-content a {
+.service-card-content a,
+.service-card-image-content a {
     color: var(--green-700) !important;
 
     font-size: 0.9rem;
@@ -696,7 +698,8 @@ p {
     text-decoration: none;
 }
 
-.service-card-content a:hover {
+.service-card-content a:hover,
+.service-card-image-content a:hover {
     color: var(--white) !important;
 }
 
