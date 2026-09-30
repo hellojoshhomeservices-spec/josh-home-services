@@ -491,15 +491,18 @@ p {
 
     overflow: hidden;
 
+    isolation: isolate;
+
     border:
-        1px solid rgba(184, 194, 201, 0.65);
+        1px solid rgba(255, 255, 255, 0.12);
 
     border-radius: var(--radius-lg);
 
     background:
         var(--navy-900);
 
-    box-shadow: var(--shadow-sm);
+    box-shadow:
+        0 18px 55px rgba(0, 0, 0, 0.22);
 
     transition:
         transform var(--transition-medium),
@@ -509,12 +512,14 @@ p {
 .service-card:hover {
     transform: translateY(-8px);
 
-    box-shadow: var(--shadow-lg);
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.30),
+        0 0 28px rgba(46, 214, 139, 0.08);
 }
 
 
 /* ---------------------------------------------------------
-   Full-card service image
+   Full-card image
    --------------------------------------------------------- */
 
 .service-card-image {
@@ -531,7 +536,10 @@ p {
 
     overflow: hidden;
 
-    background: var(--navy-900);
+    z-index: 0;
+
+    background:
+        var(--navy-900);
 }
 
 .service-card-image img {
@@ -548,11 +556,13 @@ p {
     object-position: center;
 
     background: transparent;
+
+    z-index: 0;
 }
 
 
 /* ---------------------------------------------------------
-   Light service-image overlay
+   Light image overlay
    --------------------------------------------------------- */
 
 .service-card-image::after {
@@ -567,9 +577,9 @@ p {
     background:
         linear-gradient(
             180deg,
-            rgba(11, 31, 51, 0.08) 0%,
-            rgba(11, 31, 51, 0.16) 38%,
-            rgba(11, 31, 51, 0.58) 100%
+            rgba(11, 31, 51, 0.06) 0%,
+            rgba(11, 31, 51, 0.12) 40%,
+            rgba(11, 31, 51, 0.62) 100%
         );
 
     pointer-events: none;
@@ -577,7 +587,45 @@ p {
 
 
 /* ---------------------------------------------------------
-   Remove old numbered image markers
+   Moving glass / shine effect
+   --------------------------------------------------------- */
+
+.service-card-image::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 20%,
+            rgba(255, 255, 255, 0.10) 48%,
+            rgba(255, 255, 255, 0.03) 53%,
+            transparent 75%
+        );
+
+    transform:
+        translateX(-120%);
+
+    transition:
+        transform 700ms ease;
+
+    pointer-events: none;
+}
+
+.service-card:hover
+.service-card-image::before {
+    transform:
+        translateX(120%);
+}
+
+
+/* ---------------------------------------------------------
+   Remove old numbered markers
    --------------------------------------------------------- */
 
 .service-card-image span {
@@ -586,7 +634,7 @@ p {
 
 
 /* ---------------------------------------------------------
-   Service card text sits over the photograph
+   Text over image
    --------------------------------------------------------- */
 
 .service-card-content {
@@ -596,14 +644,25 @@ p {
     right: 0;
     bottom: 0;
 
-    z-index: 2;
+    z-index: 5;
+
+    display: block;
+
+    visibility: visible;
+    opacity: 1;
 
     padding:
         28px;
 
-    background: transparent;
+    background: transparent !important;
 
-    color: var(--white);
+    color: var(--white) !important;
+}
+
+.service-card-content h3 {
+    margin-bottom: 12px;
+
+    color: var(--white) !important;
 }
 
 .service-card-label {
@@ -612,6 +671,7 @@ p {
     color: var(--green-700) !important;
 
     font-size: 0.72rem;
+
     font-weight: 900;
 
     letter-spacing: 0.12em;
@@ -619,34 +679,30 @@ p {
     text-transform: uppercase;
 }
 
-.service-card h3 {
-    margin-bottom: 12px;
-
-    color: var(--white);
-}
-
 .service-card-content > p:not(.service-card-label) {
     margin-bottom: 22px;
 
-    color: rgba(255, 255, 255, 0.88);
+    color:
+        rgba(255, 255, 255, 0.88) !important;
 }
 
-.service-card a {
-    color: var(--green-700);
+.service-card-content a {
+    color: var(--green-700) !important;
 
     font-size: 0.9rem;
+
     font-weight: 850;
 
     text-decoration: none;
 }
 
-.service-card a:hover {
-    color: var(--white);
+.service-card-content a:hover {
+    color: var(--white) !important;
 }
 
 
 /* ---------------------------------------------------------
-   Desktop / laptop split
+   Laptop split / tablet
    --------------------------------------------------------- */
 
 @media (max-width: 950px) {
