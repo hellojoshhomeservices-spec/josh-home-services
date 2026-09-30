@@ -1293,7 +1293,15 @@ p {
     right: 0;
     bottom: 0;
 
-    padding: 50px;
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(11, 31, 51, 0.72),
+            rgba(11, 31, 51, 0.18),
+            transparent
+        );
 }
 
 .material-content h2 {
@@ -1317,6 +1325,15 @@ p {
 
     color:
         rgba(255, 255, 255, 0.68);
+}
+
+.material-brick .material-content {
+    color: var(--white);
+}
+
+.material-brick .material-content h2,
+.material-brick .material-content p:not(.eyebrow) {
+    color: var(--white);
 }
 
 .material-emblem {
@@ -1349,6 +1366,7 @@ p {
     }
 
 }
+
 @media (max-width: 800px) {
 
     .material-grid {
