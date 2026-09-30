@@ -495,11 +495,11 @@ p {
     border-radius: var(--radius-lg);
 
     background:
-    linear-gradient(
-        145deg,
-        #e3e6e7,
-        #cfd5d8
-    );
+        linear-gradient(
+            145deg,
+            #e3e6e7,
+            #cfd5d8
+        );
 
     box-shadow: var(--shadow-sm);
 
@@ -514,16 +514,15 @@ p {
     box-shadow: var(--shadow-lg);
 }
 
+
+/* ---------------------------------------------------------
+   Full-Image Service Card
+   --------------------------------------------------------- */
+
 .service-card-image {
     position: relative;
 
-    min-height: 190px;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-
-    padding: 0;
+    height: 390px;
 
     overflow: hidden;
 
@@ -536,9 +535,12 @@ p {
 }
 
 .service-card-image img {
+    position: absolute;
+
+    inset: 0;
+
     width: 100%;
     height: 100%;
-    min-height: 190px;
 
     display: block;
 
@@ -553,12 +555,99 @@ p {
         );
 }
 
-.service-card-image::before {
+
+/* ---------------------------------------------------------
+   Lighter Website-Matched Image Overlay
+   --------------------------------------------------------- */
+
+.service-card-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(11, 31, 51, 0.08) 0%,
+            rgba(11, 31, 51, 0.18) 42%,
+            rgba(11, 31, 51, 0.72) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   Text Over Image
+   --------------------------------------------------------- */
+
+.service-card-image-content {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 2;
+
+    padding: 30px 28px 28px;
+
+    color: var(--white);
+}
+
+.service-card-label {
+    margin-bottom: 10px;
+
+    color: var(--green-700) !important;
+
+    font-size: 0.72rem;
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+.service-card-image-content h3 {
+    margin-bottom: 12px;
+
+    color: var(--white);
+}
+
+.service-card-image-content p:not(.service-card-label) {
+    margin-bottom: 20px;
+
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.service-card-image-content a {
+    color: var(--green-500);
+
+    font-size: 0.9rem;
+    font-weight: 850;
+
+    text-decoration: none;
+}
+
+.service-card-image-content a:hover {
+    color: var(--white);
+}
+
+
+/* ---------------------------------------------------------
+   Image Hover Treatment
+   --------------------------------------------------------- */
+
+.service-card-image::after {
     content: "";
 
     position: absolute;
 
     inset: 0;
+
+    z-index: 1;
 
     background:
         linear-gradient(
@@ -573,70 +662,20 @@ p {
 
     transition:
         transform 600ms ease;
+
+    pointer-events: none;
 }
 
 .service-card:hover
-.service-card-image::before {
+.service-card-image::after {
     transform:
         translateX(100%);
 }
 
-.service-card-image span {
-    position: relative;
-    z-index: 2;
 
-    color: rgba(255, 255, 255, 0.65);
-
-    font-size: 0.78rem;
-    font-weight: 900;
-
-    letter-spacing: 0.12em;
-}
-
-.service-card-image-maintenance {
-    background:
-        linear-gradient(
-            135deg,
-            #0b1f33,
-            #365263
-        );
-}
-
-.service-card-image-plumbing {
-    background:
-        linear-gradient(
-            135deg,
-            #12314b,
-            #526b7b
-        );
-}
-
-.service-card-image-roofing {
-    background:
-        linear-gradient(
-            135deg,
-            #202a31,
-            #5b6870
-        );
-}
-
-.service-card-image-renovation {
-    background:
-        linear-gradient(
-            135deg,
-            #0b1f33,
-            #5a2e28
-        );
-}
-
-.service-card-image-paving {
-    background:
-        linear-gradient(
-            135deg,
-            #39464e,
-            #7c858a
-        );
-}
+/* ---------------------------------------------------------
+   Welding / Steelwork Placeholder
+   --------------------------------------------------------- */
 
 .service-card-image-steel {
     background:
@@ -647,52 +686,20 @@ p {
         );
 }
 
-.service-card-content {
-    padding: 28px;
-}
 
-.service-card-label {
-    margin-bottom: 10px;
-
-    color: var(--green-700) !important;
-
-    font-size: 0.72rem;
-    font-weight: 900;
-
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-.service-card h3 {
-    margin-bottom: 12px;
-
-    color: var(--navy-900);
-}
-
-.service-card-content > p:not(.service-card-label) {
-    margin-bottom: 22px;
-
-    color: var(--muted);
-}
-
-.service-card a {
-    color: var(--navy-900);
-
-    font-size: 0.9rem;
-    font-weight: 850;
-
-    text-decoration: none;
-}
-
-.service-card a:hover {
-    color: var(--green-700);
-}
+/* ---------------------------------------------------------
+   Responsive Service Cards
+   --------------------------------------------------------- */
 
 @media (max-width: 950px) {
 
     .service-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
+    }
+
+    .service-card-image {
+        height: 360px;
     }
 }
 
@@ -703,7 +710,12 @@ p {
     }
 
     .service-card-image {
-        min-height: 170px;
+        height: 340px;
+    }
+
+    .service-card-image-content {
+        padding:
+            26px 24px 24px;
     }
 }
 
