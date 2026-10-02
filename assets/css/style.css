@@ -877,10 +877,13 @@ p {
         1px solid rgba(255, 255, 255, 0.08);
 
     transform: rotate(25deg);
+
+    pointer-events: none;
 }
 
 .projects-section .section-heading {
     position: relative;
+
     z-index: 2;
 
     margin-bottom: 55px;
@@ -891,8 +894,14 @@ p {
         rgba(255, 255, 255, 0.62);
 }
 
+
+/* ---------------------------------------------------------
+   Project layout
+   --------------------------------------------------------- */
+
 .project-showcase {
     position: relative;
+
     z-index: 2;
 
     display: grid;
@@ -904,8 +913,15 @@ p {
     gap: 22px;
 }
 
+
+/* ---------------------------------------------------------
+   Project cards
+   --------------------------------------------------------- */
+
 .project-feature,
 .project-small {
+    position: relative;
+
     overflow: hidden;
 
     border:
@@ -924,18 +940,72 @@ p {
     border-radius: var(--radius-xl);
 }
 
+.project-small {
+    border-radius: var(--radius-lg);
+}
+
+
+/* ---------------------------------------------------------
+   Full-card project images
+   --------------------------------------------------------- */
+
 .project-image {
     position: relative;
+
+    width: 100%;
+    height: 100%;
 
     overflow: hidden;
 
     background:
-        linear-gradient(
-            135deg,
-            #1d303d,
-            #47565e
-        );
+        var(--navy-900);
 }
+
+.project-image img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: fill;
+    object-position: center;
+
+    background: transparent;
+
+    z-index: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Project image overlay
+   --------------------------------------------------------- */
+
+.project-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(11, 31, 51, 0.05) 0%,
+            rgba(11, 31, 51, 0.12) 42%,
+            rgba(11, 31, 51, 0.68) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   Moving glass / shine effect
+   --------------------------------------------------------- */
 
 .project-image::before {
     content: "";
@@ -944,14 +1014,115 @@ p {
 
     inset: 0;
 
+    z-index: 2;
+
     background:
         linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.12),
-            transparent 35%,
-            rgba(0, 0, 0, 0.28)
+            115deg,
+            transparent 20%,
+            rgba(255, 255, 255, 0.10) 48%,
+            rgba(255, 255, 255, 0.03) 53%,
+            transparent 75%
         );
+
+    transform:
+        translateX(-120%);
+
+    transition:
+        transform 700ms ease;
+
+    pointer-events: none;
 }
+
+.project-feature:hover
+.project-image::before,
+.project-small:hover
+.project-image::before {
+    transform:
+        translateX(120%);
+}
+
+
+/* ---------------------------------------------------------
+   Remove old project numbering
+   --------------------------------------------------------- */
+
+.project-image span,
+.project-number,
+.project-image-placeholder {
+    display: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   Project text over image
+   --------------------------------------------------------- */
+
+.project-image-content {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    z-index: 5;
+
+    padding: 30px;
+
+    color: var(--white);
+
+    background: transparent !important;
+}
+
+.project-image-content .project-label {
+    margin-bottom: 10px;
+
+    color: var(--green-500) !important;
+
+    font-size: 0.72rem;
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+.project-image-content h3 {
+    margin-bottom: 10px;
+
+    color: var(--white) !important;
+
+    font-size: clamp(1.35rem, 2vw, 2rem);
+
+    line-height: 1.08;
+}
+
+.project-image-content p:not(.project-label) {
+    margin-bottom: 18px;
+
+    color:
+        rgba(255, 255, 255, 0.88) !important;
+}
+
+.project-image-content a {
+    color: var(--green-500) !important;
+
+    font-size: 0.9rem;
+
+    font-weight: 850;
+
+    text-decoration: none;
+}
+
+.project-image-content a:hover {
+    color: var(--white) !important;
+}
+
+
+/* ---------------------------------------------------------
+   Project image proportions
+   --------------------------------------------------------- */
 
 .project-image-main {
     min-height: 440px;
@@ -961,58 +1132,10 @@ p {
     min-height: 190px;
 }
 
-.project-image span,
-.project-number {
-    position: absolute;
 
-    top: 20px;
-    left: 20px;
-
-    z-index: 3;
-
-    color:
-        rgba(255, 255, 255, 0.7);
-
-    font-size: 0.7rem;
-    font-weight: 900;
-
-    letter-spacing: 0.14em;
-}
-
-.project-image-placeholder {
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-
-    color:
-        rgba(255, 255, 255, 0.3);
-
-    font-size: 0.8rem;
-    font-weight: 800;
-
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
-.project-content {
-    padding: 32px;
-}
-
-.project-content p:not(.project-label) {
-    color:
-        rgba(255, 255, 255, 0.62);
-}
-
-.project-content a {
-    color: var(--green-500);
-
-    font-weight: 850;
-
-    text-decoration: none;
-}
+/* ---------------------------------------------------------
+   Small project cards retain their existing layout
+   --------------------------------------------------------- */
 
 .project-stack {
     display: grid;
@@ -1020,38 +1143,51 @@ p {
     gap: 22px;
 }
 
-.project-small {
-    display: grid;
-
-    grid-template-columns: 0.9fr 1fr;
-    align-items: stretch;
-
-    border-radius: var(--radius-lg);
-}
-
 .project-small .project-image {
     min-height: 100%;
 }
 
-.project-small > div:last-child {
-    padding: 24px;
+
+/* ---------------------------------------------------------
+   Desktop positioning
+   --------------------------------------------------------- */
+
+.project-feature .project-image-content {
+    bottom: 0;
 }
 
-.project-small h3 {
-    margin-bottom: 0;
+.project-small:nth-child(1)
+.project-image-content {
+    top: 50%;
+
+    bottom: auto;
+
+    transform:
+        translateY(-50%);
+
+    left: auto;
+
+    width: 62%;
 }
 
-.project-label {
-    margin-bottom: 8px;
+.project-small:nth-child(2)
+.project-image-content {
+    top: 50%;
 
-    color: var(--green-500) !important;
+    bottom: auto;
 
-    font-size: 0.7rem;
-    font-weight: 900;
+    transform:
+        translateY(-50%);
 
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    left: auto;
+
+    width: 62%;
 }
+
+
+/* ---------------------------------------------------------
+   Laptop split / tablet
+   --------------------------------------------------------- */
 
 @media (max-width: 850px) {
 
@@ -1062,17 +1198,56 @@ p {
     .project-image-main {
         min-height: 360px;
     }
+
+    .project-small:nth-child(1)
+    .project-image-content,
+    .project-small:nth-child(2)
+    .project-image-content {
+        top: 50%;
+
+        right: 0;
+
+        width: 58%;
+    }
+
 }
+
+
+/* ---------------------------------------------------------
+   Phone portrait / landscape
+   --------------------------------------------------------- */
 
 @media (max-width: 600px) {
 
-    .project-small {
-        grid-template-columns: 1fr;
+    .project-small .project-image {
+        min-height: 300px;
     }
 
-    .project-small .project-image {
-        min-height: 180px;
+    .project-image-main {
+        min-height: 360px;
     }
+
+    .project-image-content {
+        padding:
+            26px 24px 24px;
+    }
+
+    .project-small:nth-child(1)
+    .project-image-content,
+    .project-small:nth-child(2)
+    .project-image-content {
+        top: auto;
+
+        right: 0;
+        left: 0;
+
+        bottom: 0;
+
+        width: 100%;
+
+        transform: none;
+    }
+
 }
 
 /* =========================================================
