@@ -1175,8 +1175,10 @@ p {
    ========================================================= */
 
 .material-section {
+    margin: 20px 0 !important;
     padding: 0 !important;
-    background: var(--navy-950) !important;
+
+    background: transparent !important;
 }
 
 .material-grid {
@@ -1185,6 +1187,16 @@ p {
     grid-template-columns: 1.25fr 0.75fr;
 
     min-height: 500px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 0;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.25);
 }
 
 .material-panel {
@@ -1193,26 +1205,66 @@ p {
     min-height: 500px;
 
     overflow: hidden;
+
+    isolation: isolate;
 }
+
+
+/* ---------------------------------------------------------
+   Brick Panel
+   --------------------------------------------------------- */
 
 .material-brick {
     position: relative;
 
-    background-color: var(--navy-900);
+    min-height: 500px;
 
-    background-image:
-        linear-gradient(
-            rgba(11, 31, 51, 0.28),
-            rgba(11, 31, 51, 0.42)
-        ),
-        url("/josh-home-services/assets/images/brand/josh-home-services-real-brick-wall-pretoria.webp");
+    overflow: hidden;
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background:
+        var(--navy-900);
 
     color: var(--white);
 }
+
+.material-brick-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 0;
+}
+
+.material-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(11, 31, 51, 0.08) 0%,
+            rgba(11, 31, 51, 0.18) 45%,
+            rgba(11, 31, 51, 0.72) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   Brick Panel Moving Glass Shine
+   --------------------------------------------------------- */
 
 .material-brick::after {
     content: "";
@@ -1221,26 +1273,86 @@ p {
 
     inset: 0;
 
+    z-index: 2;
+
     background:
         linear-gradient(
-            120deg,
+            115deg,
             transparent 20%,
-            rgba(255, 255, 255, 0.08) 50%,
-            transparent 70%
+            rgba(255, 255, 255, 0.10) 48%,
+            rgba(255, 255, 255, 0.03) 53%,
+            transparent 75%
         );
 
-    transform: translateX(-100%);
+    transform:
+        translateX(-120%);
 
-    transition: transform 900ms ease;
+    transition:
+        transform 700ms ease;
 
     pointer-events: none;
 }
 
 .material-brick:hover::after {
-    transform: translateX(100%);
+    transform:
+        translateX(120%);
 }
 
+
+/* ---------------------------------------------------------
+   Material Text
+   --------------------------------------------------------- */
+
+.material-content {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 5;
+
+    padding: 40px;
+
+    background: transparent !important;
+
+    box-sizing: border-box;
+}
+
+.material-content h2,
+.material-content h3 {
+    color: var(--white);
+
+    margin-bottom: 12px;
+}
+
+.material-content h2 {
+    max-width: 650px;
+}
+
+.material-content h3 {
+    max-width: 320px;
+
+    font-size: 2rem;
+
+    line-height: 1.05;
+}
+
+.material-content p:not(.eyebrow) {
+    max-width: 620px;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+}
+
+
+/* ---------------------------------------------------------
+   Steel Panel
+   --------------------------------------------------------- */
+
 .material-steel {
+    position: relative;
+
     color: var(--white);
 
     background:
@@ -1258,6 +1370,8 @@ p {
 
     inset: 0;
 
+    z-index: 1;
+
     background:
         linear-gradient(
             115deg,
@@ -1265,12 +1379,16 @@ p {
             rgba(255, 255, 255, 0.11) 48%,
             transparent 52%
         );
+
+    pointer-events: none;
 }
 
 .steel-lines {
     position: absolute;
 
     inset: 0;
+
+    z-index: 0;
 
     opacity: 0.18;
 
@@ -1282,67 +1400,21 @@ p {
             rgba(255, 255, 255, 0.22) 53px,
             transparent 54px
         );
-}
 
-.material-content {
-    position: absolute !important;
-
-    z-index: 5;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    padding: 40px;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(11, 31, 51, 0.78),
-            rgba(11, 31, 51, 0.22),
-            transparent
-        );
-
-    box-sizing: border-box;
+    pointer-events: none;
 }
 
 .material-steel .material-content {
-    bottom: 95px;
-    padding-bottom: 0;
-    padding-right: 150px;
+    bottom: 105px;
+
+    padding:
+        0 150px 0 40px;
 }
 
-.material-content h2 {
-    max-width: 650px;
 
-    color: var(--white);
-}
-
-.material-content h3 {
-    max-width: 320px;
-
-    color: var(--white);
-
-    font-size: 2rem;
-
-    line-height: 1.05;
-}
-
-.material-content p:not(.eyebrow) {
-    max-width: 620px;
-
-    color:
-        rgba(255, 255, 255, 0.68);
-}
-
-.material-brick .material-content {
-    color: var(--white);
-}
-
-.material-brick .material-content h2,
-.material-brick .material-content p:not(.eyebrow) {
-    color: var(--white);
-}
+/* ---------------------------------------------------------
+   JHS Emblem
+   --------------------------------------------------------- */
 
 .material-emblem {
     position: absolute;
@@ -1355,13 +1427,20 @@ p {
 
     object-fit: contain;
 
-    z-index: 3;
+    z-index: 6;
 
     opacity: 0.95;
 
     filter:
-        drop-shadow(0 8px 18px rgba(0, 0, 0, 0.28));
+        drop-shadow(
+            0 8px 18px rgba(0, 0, 0, 0.28)
+        );
 }
+
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
 
 @media (max-width: 800px) {
 
@@ -1371,6 +1450,10 @@ p {
 
     .material-panel {
         min-height: 420px;
+    }
+
+    .material-content {
+        padding: 28px;
     }
 
     .material-emblem {
@@ -1384,12 +1467,8 @@ p {
     .material-steel .material-content {
         bottom: 105px;
 
-        padding-left: 28px;
-        padding-right: 120px;
-    }
-
-    .material-brick .material-content {
-        padding: 28px;
+        padding:
+            0 120px 0 28px;
     }
 
 }
