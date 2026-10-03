@@ -2870,3 +2870,214 @@ main > section {
     }
 
 }
+
+/* =========================================================
+   Projects — Final Responsive Text Fix
+   ========================================================= */
+
+/* Desktop full screen */
+@media (min-width: 1201px) {
+
+    .project-small {
+        min-height: 250px;
+    }
+
+    .project-small .project-image {
+        min-height: 250px;
+    }
+
+    .project-small .project-image-content {
+        top: 0 !important;
+        right: 0;
+
+        bottom: auto !important;
+
+        width: 58%;
+
+        padding:
+            24px 26px 24px 22px;
+
+        transform: none !important;
+    }
+
+    .project-small .project-image-content .project-label {
+        display: block;
+
+        margin-bottom: 8px;
+
+        color: var(--green-500) !important;
+
+        font-size: 0.68rem;
+
+        line-height: 1.2;
+
+        letter-spacing: 0.12em;
+    }
+
+    .project-small .project-image-content h3 {
+        margin-bottom: 8px;
+
+        color: var(--white) !important;
+
+        font-size: 1.45rem;
+
+        line-height: 1.08;
+    }
+
+    .project-small .project-image-content p:not(.project-label) {
+        margin-bottom: 12px;
+
+        color:
+            rgba(255, 255, 255, 0.86) !important;
+
+        font-size: 0.92rem;
+
+        line-height: 1.45;
+    }
+
+    .project-small .project-image-content a {
+        font-size: 0.82rem;
+
+        color: var(--green-500) !important;
+    }
+}
+
+
+/* Laptop split screen + tablet landscape */
+@media (min-width: 601px) and (max-width: 1200px) {
+
+    .project-small {
+        min-height: 300px;
+    }
+
+    .project-small .project-image {
+        min-height: 300px;
+    }
+
+    .project-small .project-image-content {
+        top: 50% !important;
+
+        right: 0;
+
+        bottom: auto !important;
+
+        width: 58%;
+
+        padding:
+            24px 24px 24px 20px;
+
+        transform:
+            translateY(-50%) !important;
+    }
+
+    .project-small .project-image-content .project-label {
+        display: block;
+
+        margin-bottom: 8px;
+
+        color: var(--green-500) !important;
+
+        font-size: 0.68rem;
+
+        line-height: 1.2;
+
+        letter-spacing: 0.12em;
+    }
+
+    .project-small .project-image-content h3 {
+        margin-bottom: 8px;
+
+        color: var(--white) !important;
+
+        font-size: 1.35rem;
+
+        line-height: 1.08;
+    }
+
+    .project-small .project-image-content p:not(.project-label) {
+        margin-bottom: 12px;
+
+        color:
+            rgba(255, 255, 255, 0.86) !important;
+
+        font-size: 0.9rem;
+
+        line-height: 1.4;
+    }
+
+    .project-small .project-image-content a {
+        font-size: 0.82rem;
+
+        color: var(--green-500) !important;
+    }
+}
+
+
+/* Phone landscape */
+@media (max-width: 850px) and (orientation: landscape) {
+
+    .project-small {
+        min-height: 330px;
+    }
+
+    .project-small .project-image {
+        min-height: 330px;
+    }
+
+    .project-small .project-image-content {
+        top: auto !important;
+
+        right: 0;
+        left: 0;
+
+        bottom: 0 !important;
+
+        width: 100%;
+
+        padding:
+            24px 28px 24px;
+
+        transform: none !important;
+    }
+
+    .project-small .project-image-content .project-label {
+        display: block;
+
+        margin-bottom: 8px;
+
+        color: var(--green-500) !important;
+
+        font-size: 0.68rem;
+
+        line-height: 1.2;
+
+        letter-spacing: 0.12em;
+    }
+
+    .project-small .project-image-content h3 {
+        margin-bottom: 8px;
+
+        color: var(--white) !important;
+
+        font-size: 1.4rem;
+
+        line-height: 1.08;
+    }
+
+    .project-small .project-image-content p:not(.project-label) {
+        margin-bottom: 12px;
+
+        color:
+            rgba(255, 255, 255, 0.86) !important;
+
+        font-size: 0.9rem;
+
+        line-height: 1.4;
+    }
+
+    .project-small .project-image-content a {
+        font-size: 0.82rem;
+
+        color: var(--green-500) !important;
+    }
+}
