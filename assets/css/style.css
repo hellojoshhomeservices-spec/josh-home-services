@@ -3376,3 +3376,36 @@ main > section {
     }
 
 }
+
+/* =========================================================
+   Service Card Real Project Badge
+   ========================================================= */
+
+.service-card-project-tag {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    z-index: 6;
+
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 14px;
+
+    border: 1px solid rgba(46, 214, 139, 0.45);
+    border-radius: 999px;
+
+    background: rgba(5, 18, 30, 0.78);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    color: #2ed68b;
+    font-size: 0.74rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.35),
+        0 0 12px rgba(46, 214, 139, 0.22);
+}
