@@ -2737,7 +2737,7 @@ main > section {
             rgba(46, 214, 139, 0.20),
             transparent 34%
         ),
-        url("/josh-home-services/assets/images/hero/hero-handyman-background.png")
+        url("/assets/images/hero/hero-handyman-background.png")
         68% center / cover no-repeat !important;
 }
 
@@ -2865,7 +2865,7 @@ main > section {
                 rgba(46, 214, 139, 0.18),
                 transparent 36%
             ),
-            url("/josh-home-services/assets/images/hero/hero-handyman-background.png")
+           url("/assets/images/hero/hero-handyman-background.png")
             74% center / cover no-repeat !important;
     }
 
