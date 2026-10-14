@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hellohoshhomeservices-spec.github.io/josh-home-services/sitemap.xml
+Sitemap: https://joshhomeservices.co.za/sitemap.xml
