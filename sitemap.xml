@@ -45,12 +45,6 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- AREA PAGES -->
-    <url>
-        <loc>https://joshhomeservices.co.za/areas/pretoria-east/</loc>
-        <priority>0.8</priority>
-    </url>
-
     <!-- GUIDES HUB -->
     <url>
         <loc>https://joshhomeservices.co.za/guides/</loc>
