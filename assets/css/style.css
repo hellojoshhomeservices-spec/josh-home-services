@@ -3410,3 +3410,66 @@ main > section {
         0 4px 16px rgba(0, 0, 0, 0.35),
         0 0 12px rgba(46, 214, 139, 0.22);
 }
+
+/* =========================================================
+   Sleek Footer Icon Buttons (Phone & WhatsApp)
+   ========================================================= */
+
+.site-footer-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    margin-top: 18px !important;
+    margin-bottom: 8px !important;
+}
+
+.footer-icon-btn {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+
+    padding: 0 !important;
+    border-radius: 50% !important;
+
+    text-decoration: none !important;
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease !important;
+}
+
+.footer-icon-btn::after {
+    display: none !important;
+}
+
+.footer-icon-btn:hover {
+    transform: translateY(-2px) !important;
+}
+
+.footer-phone-btn {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+}
+
+.footer-phone-btn:hover {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+.footer-wa-btn {
+    color: #2ed68b !important;
+    background: rgba(46, 214, 139, 0.12) !important;
+    border: 1px solid rgba(46, 214, 139, 0.45) !important;
+    box-shadow: 0 0 16px rgba(46, 214, 139, 0.2) !important;
+}
+
+.footer-wa-btn:hover {
+    border-color: #2ed68b !important;
+    box-shadow: 0 0 24px rgba(46, 214, 139, 0.45) !important;
+}
