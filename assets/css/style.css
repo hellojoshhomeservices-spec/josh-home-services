@@ -3578,47 +3578,71 @@ main > section {
    --------------------------------------------------------- */
 @media (max-width: 768px) and (orientation: portrait) {
 
-    /* Zoom out container and keep off phone walls */
+    /* Keep content off phone walls with breathing room */
     .container {
-        width: calc(100% - 52px) !important;
-        max-width: 330px !important;
+        width: calc(100% - 44px) !important;
+        max-width: 340px !important;
         margin-inline: auto !important;
     }
 
     main > section {
-        padding: 42px 0 !important;
+        padding: 40px 0 !important;
     }
 
-    /* Zoomed-out Service & Guide Cards */
+    /* Fixed Service & Guide Cards (No collapsed lines) */
     .service-grid {
-        grid-template-columns: 1fr !important;
-        gap: 20px !important;
-        max-width: 320px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 18px !important;
         margin: 20px auto 0 !important;
     }
 
     .service-card {
-        height: 220px !important;
+        display: block !important;
+        width: 100% !important;
         max-width: 320px !important;
-        margin-inline: auto !important;
+        height: 220px !important;
+        position: relative !important;
+        overflow: hidden !important;
         border-radius: 14px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+
+    .service-card-image {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
     }
 
     .service-card-image img {
+        width: 100% !important;
+        height: 100% !important;
         object-fit: cover !important;
         object-position: center !important;
+        display: block !important;
     }
 
     .service-card-content,
     .service-card-image-content {
-        padding: 12px 14px 12px !important;
+        position: absolute !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        padding: 12px 14px 10px !important;
+        box-sizing: border-box !important;
     }
 
     .service-card-content h3,
     .service-card-image-content h3 {
         font-size: 0.96rem !important;
         line-height: 1.15 !important;
-        margin-bottom: 3px !important;
+        margin-bottom: 2px !important;
+        color: #ffffff !important;
     }
 
     .service-card-content .service-card-label,
@@ -3631,11 +3655,12 @@ main > section {
     .service-card-image-content > p:not(.service-card-label) {
         font-size: 0.72rem !important;
         line-height: 1.25 !important;
-        margin-bottom: 6px !important;
+        margin-bottom: 4px !important;
         display: -webkit-box !important;
         -webkit-line-clamp: 2 !important;
         -webkit-box-orient: vertical !important;
         overflow: hidden !important;
+        color: rgba(255, 255, 255, 0.82) !important;
     }
 
     .service-card-content a,
@@ -3651,9 +3676,9 @@ main > section {
         font-size: 0.55rem !important;
     }
 
-    /* Sleek Rounded Rectangle Material Section */
+    /* Sleek Ultra-Compact Material Badge */
     .material-section {
-        margin: 18px 0 !important;
+        margin: 16px 0 !important;
         padding: 0 !important;
     }
 
@@ -3669,74 +3694,74 @@ main > section {
     .material-panel,
     .material-brick,
     .material-steel {
-        min-height: 130px !important;
-        height: 130px !important;
+        min-height: 105px !important;
+        height: 105px !important;
     }
 
     .material-content {
-        padding: 12px 14px !important;
+        padding: 10px 14px !important;
     }
 
     .material-content .eyebrow {
-        font-size: 0.58rem !important;
+        font-size: 0.55rem !important;
         margin-bottom: 2px !important;
     }
 
     .material-content h2 {
-        font-size: 1.02rem !important;
+        font-size: 0.95rem !important;
         line-height: 1.15 !important;
         margin-bottom: 2px !important;
     }
 
     .material-content h3 {
-        font-size: 0.92rem !important;
+        font-size: 0.88rem !important;
         line-height: 1.15 !important;
         margin-bottom: 2px !important;
     }
 
     .material-content p:not(.eyebrow) {
-        font-size: 0.70rem !important;
-        line-height: 1.25 !important;
+        font-size: 0.68rem !important;
+        line-height: 1.22 !important;
     }
 
     .material-emblem {
-        width: 38px !important;
-        height: 38px !important;
-        right: 12px !important;
-        bottom: 12px !important;
+        width: 34px !important;
+        height: 34px !important;
+        right: 10px !important;
+        bottom: 10px !important;
     }
 
     .material-steel .material-content {
-        bottom: 6px !important;
-        padding: 0 48px 0 14px !important;
+        bottom: 4px !important;
+        padding: 0 42px 0 12px !important;
     }
 
     /* Sleek Compact Areas Section */
     .areas-layout {
         grid-template-columns: 1fr !important;
-        gap: 18px !important;
+        gap: 16px !important;
         max-width: 320px !important;
         margin-inline: auto !important;
         text-align: center !important;
     }
 
     .areas-intro h2 {
-        font-size: 1.40rem !important;
+        font-size: 1.35rem !important;
         line-height: 1.15 !important;
-        margin-bottom: 8px !important;
+        margin-bottom: 6px !important;
     }
 
     .areas-intro p {
-        font-size: 0.80rem !important;
-        line-height: 1.35 !important;
-        margin-bottom: 12px !important;
+        font-size: 0.78rem !important;
+        line-height: 1.30 !important;
+        margin-bottom: 10px !important;
     }
 
     .areas-intro .button {
-        max-width: 220px !important;
+        max-width: 200px !important;
         margin-inline: auto !important;
-        min-height: 40px !important;
-        font-size: 0.80rem !important;
+        min-height: 38px !important;
+        font-size: 0.78rem !important;
     }
 
     .areas-panel {
@@ -3748,23 +3773,23 @@ main > section {
     }
 
     .area-group {
-        padding: 8px 12px !important;
-        grid-template-columns: 24px 1fr !important;
-        gap: 8px !important;
+        padding: 8px 10px !important;
+        grid-template-columns: 22px 1fr !important;
+        gap: 6px !important;
     }
 
     .area-group > span {
-        font-size: 0.60rem !important;
+        font-size: 0.58rem !important;
     }
 
     .area-group strong {
-        font-size: 0.84rem !important;
+        font-size: 0.82rem !important;
         margin-bottom: 1px !important;
     }
 
     .area-group p {
-        font-size: 0.70rem !important;
-        line-height: 1.25 !important;
+        font-size: 0.68rem !important;
+        line-height: 1.22 !important;
     }
 
     /* Master Map on Areas Page */
@@ -3788,109 +3813,142 @@ main > section {
 @media (max-width: 950px) and (orientation: landscape) {
 
     .container {
-        width: calc(100% - 64px) !important;
+        width: calc(100% - 56px) !important;
         max-width: 620px !important;
         margin-inline: auto !important;
     }
 
     main > section {
-        padding: 38px 0 !important;
+        padding: 34px 0 !important;
     }
 
-    /* Centered, compact 2-column project cards */
-    .project-showcase {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 14px !important;
-        max-width: 600px !important;
-        margin-inline: auto !important;
-    }
-
-    .project-feature {
-        border-radius: 12px !important;
-    }
-
-    .project-image-main {
-        min-height: 170px !important;
-        height: 170px !important;
-    }
-
-    .project-stack {
-        gap: 10px !important;
-    }
-
-    .project-small {
-        min-height: 80px !important;
-        height: 80px !important;
-        border-radius: 10px !important;
-    }
-
-    .project-small .project-image {
-        min-height: 80px !important;
-        height: 80px !important;
-    }
-
-    .project-small .project-image-content {
-        top: auto !important;
-        right: 0 !important;
-        left: 0 !important;
-        bottom: 0 !important;
-        width: 100% !important;
-        padding: 6px 10px !important;
-        transform: none !important;
-    }
-
-    .project-small .project-image-content h3 {
-        font-size: 0.78rem !important;
-        margin-bottom: 2px !important;
-    }
-
-    .project-small .project-image-content .project-label {
-        font-size: 0.52rem !important;
-        margin-bottom: 1px !important;
-    }
-
-    .project-small .project-image-content p:not(.project-label) {
-        display: none !important;
-    }
-
-    .project-small .project-image-content a {
-        font-size: 0.65rem !important;
-    }
-
-    /* Centered 2-column landscape service cards */
+    /* Centered, compact 2-column landscape service cards */
     .service-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 14px !important;
         max-width: 600px !important;
         margin-inline: auto !important;
     }
 
     .service-card {
+        display: block !important;
+        width: 100% !important;
         height: 185px !important;
         border-radius: 12px !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    .service-card-image {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .service-card-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
     }
 
     .service-card-content,
     .service-card-image-content {
-        padding: 10px 12px 10px !important;
+        position: absolute !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        padding: 10px 12px !important;
     }
 
     .service-card-content h3,
     .service-card-image-content h3 {
         font-size: 0.88rem !important;
+        line-height: 1.15 !important;
         margin-bottom: 2px !important;
     }
 
+    .service-card-content .service-card-label,
+    .service-card-image-content .service-card-label {
+        font-size: 0.52rem !important;
+        margin-bottom: 1px !important;
+    }
+
+    /* Restored compact description in landscape */
     .service-card-content > p:not(.service-card-label),
     .service-card-image-content > p:not(.service-card-label) {
-        display: none !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        font-size: 0.68rem !important;
+        line-height: 1.20 !important;
+        margin-bottom: 4px !important;
+        color: rgba(255, 255, 255, 0.80) !important;
+    }
+
+    .service-card-content a,
+    .service-card-image-content a {
+        font-size: 0.68rem !important;
+    }
+
+    /* Compact landscape areas section */
+    .areas-layout {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 16px !important;
+        max-width: 600px !important;
+        margin-inline: auto !important;
+        align-items: center !important;
+    }
+
+    .areas-intro h2 {
+        font-size: 1.15rem !important;
+        line-height: 1.15 !important;
+        margin-bottom: 4px !important;
+    }
+
+    .areas-intro p {
+        font-size: 0.72rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .areas-intro .button {
+        min-height: 34px !important;
+        font-size: 0.72rem !important;
+        padding: 0 14px !important;
+    }
+
+    .areas-panel {
+        padding: 4px !important;
+        border-radius: 12px !important;
+    }
+
+    .area-group {
+        padding: 6px 10px !important;
+        grid-template-columns: 20px 1fr !important;
+        gap: 6px !important;
+    }
+
+    .area-group > span {
+        font-size: 0.55rem !important;
+    }
+
+    .area-group strong {
+        font-size: 0.78rem !important;
+        margin-bottom: 1px !important;
+    }
+
+    .area-group p {
+        font-size: 0.65rem !important;
+        line-height: 1.20 !important;
     }
 
     /* Centered sleek rectangle material section */
     .material-grid {
         grid-template-columns: 1.15fr 0.85fr !important;
         max-width: 600px !important;
-        min-height: 140px !important;
+        min-height: 135px !important;
         margin-inline: auto !important;
         border-radius: 12px !important;
     }
@@ -3898,33 +3956,35 @@ main > section {
     .material-panel,
     .material-brick,
     .material-steel {
-        min-height: 140px !important;
-        height: 140px !important;
+        min-height: 135px !important;
+        height: 135px !important;
     }
 
     .material-content {
-        padding: 12px !important;
+        padding: 10px 12px !important;
     }
 
     .material-content h2,
     .material-content h3 {
-        font-size: 0.92rem !important;
+        font-size: 0.88rem !important;
         margin-bottom: 2px !important;
     }
 
     .material-content p:not(.eyebrow) {
-        font-size: 0.68rem !important;
+        font-size: 0.65rem !important;
+        line-height: 1.22 !important;
     }
 
     .material-emblem {
-        width: 36px !important;
-        height: 36px !important;
+        width: 34px !important;
+        height: 34px !important;
         right: 10px !important;
         bottom: 10px !important;
     }
 
     .area-map-card {
         max-width: 580px !important;
-        height: 190px !important;
+        height: 180px !important;
     }
 }
+
