@@ -2974,75 +2974,61 @@ main > section {
 }
 
 
-/* Laptop split screen + tablet landscape */
+/* Laptop split screen + tablet landscape (Scaled Down & Compact) */
 @media (min-width: 601px) and (max-width: 1200px) {
 
     .project-small {
-        min-height: 300px;
+        min-height: 220px;
     }
 
     .project-small .project-image {
-        min-height: 300px;
+        min-height: 220px;
     }
 
     .project-small .project-image-content {
         top: 50% !important;
-
         right: 0;
-
         bottom: auto !important;
-
-        width: 58%;
-
-        padding:
-            24px 24px 24px 20px;
-
-        transform:
-            translateY(-50%) !important;
+        width: 60%;
+        padding: 14px 16px !important;
+        transform: translateY(-50%) !important;
     }
 
     .project-small .project-image-content .project-label {
-        display: block;
-
-        margin-bottom: 8px;
-
-        color: var(--green-500) !important;
-
-        font-size: 0.68rem;
-
-        line-height: 1.2;
-
-        letter-spacing: 0.12em;
+        font-size: 0.60rem !important;
+        margin-bottom: 4px !important;
     }
 
     .project-small .project-image-content h3 {
-        margin-bottom: 8px;
-
-        color: var(--white) !important;
-
-        font-size: 1.35rem;
-
-        line-height: 1.08;
+        font-size: 1.05rem !important;
+        line-height: 1.15 !important;
+        margin-bottom: 4px !important;
     }
 
     .project-small .project-image-content p:not(.project-label) {
-        margin-bottom: 12px;
-
-        color:
-            rgba(255, 255, 255, 0.86) !important;
-
-        font-size: 0.9rem;
-
-        line-height: 1.4;
+        font-size: 0.76rem !important;
+        line-height: 1.30 !important;
+        margin-bottom: 8px !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
     }
 
     .project-small .project-image-content a {
-        font-size: 0.82rem;
+        font-size: 0.74rem !important;
+    }
 
-        color: var(--green-500) !important;
+    .project-feature .project-image-content h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 6px !important;
+    }
+
+    .project-feature .project-image-content p:not(.project-label) {
+        font-size: 0.82rem !important;
+        line-height: 1.35 !important;
     }
 }
-
 
 /* Phone landscape (Scaled Down & Compact) */
 @media (max-width: 850px) and (orientation: landscape) {
@@ -3569,16 +3555,74 @@ main > section {
 }
 
 /* =========================================================
-   AUTHORITATIVE MOBILE ONLY RULES (PORTRAIT & LANDSCAPE)
-   DOES NOT AFFECT LAPTOP FULL SCREEN OR SPLIT SCREEN
+   AUTHORITATIVE RESPONSIVE POLISH
+   (LAPTOP SPLITSCREEN, MOBILE PORTRAIT & LANDSCAPE)
    ========================================================= */
 
 /* ---------------------------------------------------------
-   1. MOBILE PORTRAIT (Upright Phone <= 768px)
+   A. LAPTOP SPLITSCREEN & TABLET (max-width: 1200px)
+   --------------------------------------------------------- */
+@media (max-width: 1200px) {
+
+    /* Scaled-down Section Headings & Paragraphs */
+    h2 {
+        font-size: 1.60rem !important;
+        line-height: 1.18 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .eyebrow {
+        font-size: 0.64rem !important;
+        margin-bottom: 6px !important;
+    }
+
+    main > section p:not(.hero-text) {
+        font-size: 0.86rem !important;
+        line-height: 1.45 !important;
+    }
+
+    /* Dainty, compact project tag on cards */
+    .service-card-image .service-card-project-tag,
+    .service-card-project-tag {
+        top: 12px !important;
+        left: 12px !important;
+        padding: 3px 9px !important;
+        font-size: 0.62rem !important;
+        letter-spacing: 0.05em !important;
+        max-width: calc(100% - 24px) !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* Sleek Centered FAQ */
+    .guide-faq {
+        max-width: 680px !important;
+        margin: 22px auto 0 !important;
+    }
+
+    .guide-faq summary {
+        padding: 14px 34px 14px 0 !important;
+        font-size: 0.90rem !important;
+    }
+
+    .guide-faq summary::after {
+        font-size: 1.15rem !important;
+        top: 11px !important;
+    }
+
+    .guide-faq details p {
+        font-size: 0.82rem !important;
+        line-height: 1.40 !important;
+        padding: 0 0 14px !important;
+    }
+}
+
+/* ---------------------------------------------------------
+   B. MOBILE PORTRAIT (Upright Phone <= 768px)
    --------------------------------------------------------- */
 @media (max-width: 768px) and (orientation: portrait) {
 
-    /* Keep content off phone walls with breathing room */
     .container {
         width: calc(100% - 44px) !important;
         max-width: 340px !important;
@@ -3586,17 +3630,35 @@ main > section {
     }
 
     main > section {
-        padding: 40px 0 !important;
+        padding: 36px 0 !important;
     }
 
-    /* Fixed Service & Guide Cards (No collapsed lines) */
+    /* Reduced General Section Text Outside Cards */
+    h2 {
+        font-size: 1.28rem !important;
+        line-height: 1.18 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .eyebrow {
+        font-size: 0.58rem !important;
+        margin-bottom: 4px !important;
+    }
+
+    main > section p:not(.hero-text) {
+        font-size: 0.78rem !important;
+        line-height: 1.35 !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* Compact Service & Guide Cards */
     .service-grid {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         width: 100% !important;
         gap: 18px !important;
-        margin: 20px auto 0 !important;
+        margin: 18px auto 0 !important;
     }
 
     .service-card {
@@ -3616,15 +3678,12 @@ main > section {
         inset: 0 !important;
         width: 100% !important;
         height: 100% !important;
-        overflow: hidden !important;
     }
 
     .service-card-image img {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
-        object-position: center !important;
-        display: block !important;
     }
 
     .service-card-content,
@@ -3634,38 +3693,35 @@ main > section {
         right: 0 !important;
         bottom: 0 !important;
         padding: 12px 14px 10px !important;
-        box-sizing: border-box !important;
     }
 
     .service-card-content h3,
     .service-card-image-content h3 {
-        font-size: 0.96rem !important;
+        font-size: 0.94rem !important;
         line-height: 1.15 !important;
         margin-bottom: 2px !important;
-        color: #ffffff !important;
     }
 
     .service-card-content .service-card-label,
     .service-card-image-content .service-card-label {
-        font-size: 0.58rem !important;
+        font-size: 0.56rem !important;
         margin-bottom: 2px !important;
     }
 
     .service-card-content > p:not(.service-card-label),
     .service-card-image-content > p:not(.service-card-label) {
         font-size: 0.72rem !important;
-        line-height: 1.25 !important;
+        line-height: 1.24 !important;
         margin-bottom: 4px !important;
         display: -webkit-box !important;
         -webkit-line-clamp: 2 !important;
         -webkit-box-orient: vertical !important;
         overflow: hidden !important;
-        color: rgba(255, 255, 255, 0.82) !important;
     }
 
     .service-card-content a,
     .service-card-image-content a {
-        font-size: 0.72rem !important;
+        font-size: 0.70rem !important;
     }
 
     .service-card-image .service-card-project-tag,
@@ -3674,9 +3730,13 @@ main > section {
         left: 10px !important;
         padding: 2px 7px !important;
         font-size: 0.55rem !important;
+        max-width: calc(100% - 20px) !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
 
-    /* Sleek Ultra-Compact Material Badge */
+    /* Sleek Material Section */
     .material-section {
         margin: 16px 0 !important;
         padding: 0 !important;
@@ -3688,7 +3748,6 @@ main > section {
         margin-inline: auto !important;
         border-radius: 14px !important;
         overflow: hidden !important;
-        border: 1px solid rgba(255, 255, 255, 0.12) !important;
     }
 
     .material-panel,
@@ -3703,25 +3762,25 @@ main > section {
     }
 
     .material-content .eyebrow {
-        font-size: 0.55rem !important;
+        font-size: 0.54rem !important;
         margin-bottom: 2px !important;
     }
 
     .material-content h2 {
-        font-size: 0.95rem !important;
+        font-size: 0.94rem !important;
         line-height: 1.15 !important;
         margin-bottom: 2px !important;
     }
 
     .material-content h3 {
-        font-size: 0.88rem !important;
+        font-size: 0.86rem !important;
         line-height: 1.15 !important;
         margin-bottom: 2px !important;
     }
 
     .material-content p:not(.eyebrow) {
         font-size: 0.68rem !important;
-        line-height: 1.22 !important;
+        line-height: 1.20 !important;
     }
 
     .material-emblem {
@@ -3743,25 +3802,6 @@ main > section {
         max-width: 320px !important;
         margin-inline: auto !important;
         text-align: center !important;
-    }
-
-    .areas-intro h2 {
-        font-size: 1.35rem !important;
-        line-height: 1.15 !important;
-        margin-bottom: 6px !important;
-    }
-
-    .areas-intro p {
-        font-size: 0.78rem !important;
-        line-height: 1.30 !important;
-        margin-bottom: 10px !important;
-    }
-
-    .areas-intro .button {
-        max-width: 200px !important;
-        margin-inline: auto !important;
-        min-height: 38px !important;
-        font-size: 0.78rem !important;
     }
 
     .areas-panel {
@@ -3792,7 +3832,29 @@ main > section {
         line-height: 1.22 !important;
     }
 
-    /* Master Map on Areas Page */
+    /* Centered Compact FAQ on Mobile */
+    .guide-faq {
+        max-width: 320px !important;
+        margin: 18px auto 0 !important;
+    }
+
+    .guide-faq summary {
+        padding: 12px 28px 12px 0 !important;
+        font-size: 0.82rem !important;
+        line-height: 1.30 !important;
+    }
+
+    .guide-faq summary::after {
+        font-size: 1.05rem !important;
+        top: 9px !important;
+    }
+
+    .guide-faq details p {
+        font-size: 0.74rem !important;
+        line-height: 1.32 !important;
+        padding: 0 0 12px !important;
+    }
+
     .area-map-card {
         max-width: 320px !important;
         height: 180px !important;
@@ -3808,7 +3870,7 @@ main > section {
 }
 
 /* ---------------------------------------------------------
-   2. MOBILE LANDSCAPE (Rotated Phone <= 950px)
+   C. MOBILE LANDSCAPE (Rotated Phone <= 950px)
    --------------------------------------------------------- */
 @media (max-width: 950px) and (orientation: landscape) {
 
@@ -3819,10 +3881,104 @@ main > section {
     }
 
     main > section {
-        padding: 34px 0 !important;
+        padding: 30px 0 !important;
     }
 
-    /* Centered, compact 2-column landscape service cards */
+    /* Reduced General Section Text in Landscape */
+    h2 {
+        font-size: 1.20rem !important;
+        line-height: 1.15 !important;
+        margin-bottom: 4px !important;
+    }
+
+    .eyebrow {
+        font-size: 0.56rem !important;
+        margin-bottom: 3px !important;
+    }
+
+    main > section p:not(.hero-text) {
+        font-size: 0.74rem !important;
+        line-height: 1.28 !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Dainty, compact project tag in landscape */
+    .service-card-image .service-card-project-tag,
+    .service-card-project-tag {
+        top: 8px !important;
+        left: 8px !important;
+        padding: 2px 7px !important;
+        font-size: 0.54rem !important;
+        letter-spacing: 0.04em !important;
+        max-width: calc(100% - 16px) !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* Scaled-down landscape project cards */
+    .project-showcase {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+        max-width: 600px !important;
+        margin-inline: auto !important;
+    }
+
+    .project-image-main {
+        min-height: 160px !important;
+        height: 160px !important;
+    }
+
+    .project-feature .project-image-content h3 {
+        font-size: 0.90rem !important;
+        margin-bottom: 2px !important;
+    }
+
+    .project-feature .project-image-content p:not(.project-label) {
+        font-size: 0.70rem !important;
+        line-height: 1.20 !important;
+        margin-bottom: 4px !important;
+    }
+
+    .project-small {
+        min-height: 75px !important;
+        height: 75px !important;
+    }
+
+    .project-small .project-image {
+        min-height: 75px !important;
+        height: 75px !important;
+    }
+
+    .project-small .project-image-content {
+        top: auto !important;
+        right: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        padding: 6px 10px !important;
+        transform: none !important;
+    }
+
+    .project-small .project-image-content .project-label {
+        font-size: 0.50rem !important;
+        margin-bottom: 1px !important;
+    }
+
+    .project-small .project-image-content h3 {
+        font-size: 0.76rem !important;
+        margin-bottom: 2px !important;
+    }
+
+    .project-small .project-image-content p:not(.project-label) {
+        display: none !important;
+    }
+
+    .project-small .project-image-content a {
+        font-size: 0.65rem !important;
+    }
+
+    /* Landscape service cards */
     .service-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 14px !important;
@@ -3831,60 +3987,29 @@ main > section {
     }
 
     .service-card {
-        display: block !important;
-        width: 100% !important;
         height: 185px !important;
-        border-radius: 12px !important;
-        position: relative !important;
-        overflow: hidden !important;
-    }
-
-    .service-card-image {
-        position: absolute !important;
-        inset: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-    }
-
-    .service-card-image img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
     }
 
     .service-card-content,
     .service-card-image-content {
-        position: absolute !important;
-        left: 0 !important;
-        right: 0 !important;
-        bottom: 0 !important;
-        padding: 10px 12px !important;
+        padding: 8px 12px !important;
     }
 
     .service-card-content h3,
     .service-card-image-content h3 {
-        font-size: 0.88rem !important;
-        line-height: 1.15 !important;
+        font-size: 0.86rem !important;
         margin-bottom: 2px !important;
     }
 
-    .service-card-content .service-card-label,
-    .service-card-image-content .service-card-label {
-        font-size: 0.52rem !important;
-        margin-bottom: 1px !important;
-    }
-
-    /* Restored compact description in landscape */
     .service-card-content > p:not(.service-card-label),
     .service-card-image-content > p:not(.service-card-label) {
+        font-size: 0.68rem !important;
+        line-height: 1.20 !important;
+        margin-bottom: 4px !important;
         display: -webkit-box !important;
         -webkit-line-clamp: 2 !important;
         -webkit-box-orient: vertical !important;
         overflow: hidden !important;
-        font-size: 0.68rem !important;
-        line-height: 1.20 !important;
-        margin-bottom: 4px !important;
-        color: rgba(255, 255, 255, 0.80) !important;
     }
 
     .service-card-content a,
@@ -3902,84 +4027,68 @@ main > section {
     }
 
     .areas-intro h2 {
-        font-size: 1.15rem !important;
+        font-size: 1.10rem !important;
         line-height: 1.15 !important;
-        margin-bottom: 4px !important;
+        margin-bottom: 3px !important;
     }
 
     .areas-intro p {
-        font-size: 0.72rem !important;
-        line-height: 1.25 !important;
-        margin-bottom: 8px !important;
+        font-size: 0.70rem !important;
+        line-height: 1.22 !important;
+        margin-bottom: 6px !important;
     }
 
     .areas-intro .button {
-        min-height: 34px !important;
-        font-size: 0.72rem !important;
-        padding: 0 14px !important;
+        min-height: 32px !important;
+        font-size: 0.70rem !important;
+        padding: 0 12px !important;
     }
 
     .areas-panel {
-        padding: 4px !important;
+        padding: 3px !important;
         border-radius: 12px !important;
     }
 
     .area-group {
-        padding: 6px 10px !important;
-        grid-template-columns: 20px 1fr !important;
-        gap: 6px !important;
+        padding: 5px 8px !important;
+        grid-template-columns: 18px 1fr !important;
+        gap: 5px !important;
     }
 
     .area-group > span {
-        font-size: 0.55rem !important;
+        font-size: 0.52rem !important;
     }
 
     .area-group strong {
-        font-size: 0.78rem !important;
+        font-size: 0.76rem !important;
         margin-bottom: 1px !important;
     }
 
     .area-group p {
-        font-size: 0.65rem !important;
-        line-height: 1.20 !important;
+        font-size: 0.64rem !important;
+        line-height: 1.18 !important;
     }
 
-    /* Centered sleek rectangle material section */
-    .material-grid {
-        grid-template-columns: 1.15fr 0.85fr !important;
-        max-width: 600px !important;
-        min-height: 135px !important;
-        margin-inline: auto !important;
-        border-radius: 12px !important;
+    /* Centered Sleek FAQ in Landscape */
+    .guide-faq {
+        max-width: 580px !important;
+        margin: 16px auto 0 !important;
     }
 
-    .material-panel,
-    .material-brick,
-    .material-steel {
-        min-height: 135px !important;
-        height: 135px !important;
+    .guide-faq summary {
+        padding: 10px 24px 10px 0 !important;
+        font-size: 0.80rem !important;
     }
 
-    .material-content {
-        padding: 10px 12px !important;
+    .guide-faq summary::after {
+        font-size: 1.00rem !important;
+        top: 8px !important;
     }
 
-    .material-content h2,
-    .material-content h3 {
-        font-size: 0.88rem !important;
-        margin-bottom: 2px !important;
-    }
-
-    .material-content p:not(.eyebrow) {
-        font-size: 0.65rem !important;
-        line-height: 1.22 !important;
-    }
-
-    .material-emblem {
-        width: 34px !important;
-        height: 34px !important;
-        right: 10px !important;
-        bottom: 10px !important;
+    .guide-faq details p {
+        font-size: 0.72rem !important;
+        line-height: 1.30 !important;
+        padding: 0 0 10px !important;
     }
 
     .area-map-card {
@@ -3987,4 +4096,3 @@ main > section {
         height: 180px !important;
     }
 }
-
