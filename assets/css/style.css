@@ -470,7 +470,7 @@ p {
 }
 
 /* =========================================================
-   Service Cards (Sleek, Zoomed-Out, Balanced)
+   Service Cards (Sleek Widescreen & Zoomed Out)
    ========================================================= */
 
 .service-grid {
@@ -479,15 +479,15 @@ p {
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
-    gap: 30px;
+    gap: 36px;
 
-    margin-top: 40px;
+    margin-top: 36px;
 }
 
 .service-card {
     position: relative;
 
-    height: 380px;
+    height: 310px;
 
     overflow: hidden;
 
@@ -502,7 +502,7 @@ p {
         var(--navy-900);
 
     box-shadow:
-        0 14px 40px rgba(0, 0, 0, 0.24);
+        0 12px 35px rgba(0, 0, 0, 0.22);
 
     transition:
         transform var(--transition-medium),
@@ -510,17 +510,12 @@ p {
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 
     box-shadow:
-        0 20px 55px rgba(0, 0, 0, 0.32),
-        0 0 24px rgba(46, 214, 139, 0.08);
+        0 18px 45px rgba(0, 0, 0, 0.30),
+        0 0 20px rgba(46, 214, 139, 0.08);
 }
-
-
-/* ---------------------------------------------------------
-   Full-card image
-   --------------------------------------------------------- */
 
 .service-card-image {
     position: absolute;
@@ -560,11 +555,6 @@ p {
     z-index: 0;
 }
 
-
-/* ---------------------------------------------------------
-   Light image overlay
-   --------------------------------------------------------- */
-
 .service-card-image::after {
     content: "";
 
@@ -577,18 +567,13 @@ p {
     background:
         linear-gradient(
             180deg,
-            rgba(7, 21, 33, 0.10) 0%,
+            rgba(7, 21, 33, 0.08) 0%,
             rgba(7, 21, 33, 0.30) 45%,
-            rgba(7, 21, 33, 0.88) 100%
+            rgba(7, 21, 33, 0.90) 100%
         );
 
     pointer-events: none;
 }
-
-
-/* ---------------------------------------------------------
-   Moving glass / shine effect
-   --------------------------------------------------------- */
 
 .service-card-image::before {
     content: "";
@@ -623,19 +608,9 @@ p {
         translateX(120%);
 }
 
-
-/* ---------------------------------------------------------
-   Remove old numbered markers
-   --------------------------------------------------------- */
-
 .service-card-image span:not(.service-card-project-tag) {
     display: none !important;
 }
-
-
-/* ---------------------------------------------------------
-   Text over image (Sleek, Proportional Spacing)
-   --------------------------------------------------------- */
 
 .service-card-content,
 .service-card-image-content {
@@ -651,7 +626,7 @@ p {
     visibility: visible;
     opacity: 1;
 
-    padding: 22px 20px 20px;
+    padding: 18px 18px 16px;
 
     background: transparent !important;
 
@@ -660,9 +635,9 @@ p {
 
 .service-card-content h3,
 .service-card-image-content h3 {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 
-    font-size: 1.15rem;
+    font-size: 1.08rem;
 
     line-height: 1.2;
 
@@ -671,11 +646,11 @@ p {
 
 .service-card-content .service-card-label,
 .service-card-image-content .service-card-label {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 
     color: var(--green-500) !important;
 
-    font-size: 0.68rem;
+    font-size: 0.65rem;
 
     font-weight: 850;
 
@@ -686,21 +661,21 @@ p {
 
 .service-card-content > p:not(.service-card-label),
 .service-card-image-content > p:not(.service-card-label) {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 
-    font-size: 0.85rem;
+    font-size: 0.80rem;
 
-    line-height: 1.42;
+    line-height: 1.38;
 
     color:
-        rgba(255, 255, 255, 0.82) !important;
+        rgba(255, 255, 255, 0.80) !important;
 }
 
 .service-card-content a,
 .service-card-image-content a {
     color: var(--green-500) !important;
 
-    font-size: 0.84rem;
+    font-size: 0.80rem;
 
     font-weight: 800;
 
@@ -712,51 +687,62 @@ p {
     color: var(--white) !important;
 }
 
-
-/* ---------------------------------------------------------
-   Laptop split / tablet
-   --------------------------------------------------------- */
-
 @media (max-width: 950px) {
 
     .service-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
 
-        gap: 24px;
+        gap: 22px;
     }
 
     .service-card {
-        height: 360px;
+        height: 290px;
     }
 }
 
-
-/* ---------------------------------------------------------
-   Phone portrait / landscape (Zoomed-Out with Breathing Room)
-   --------------------------------------------------------- */
-
-@media (max-width: 620px) {
+@media (max-width: 700px) {
 
     .service-grid {
         grid-template-columns: 1fr;
 
-        gap: 24px;
+        gap: 20px;
 
-        max-width: 380px;
+        max-width: 330px;
 
         margin-inline: auto;
     }
 
     .service-card {
-        height: 320px;
+        height: 240px !important;
 
         border-radius: var(--radius-md);
     }
 
     .service-card-content,
     .service-card-image-content {
-        padding: 18px 16px 16px;
+        padding: 14px 14px 12px !important;
+    }
+
+    .service-card-content h3,
+    .service-card-image-content h3 {
+        font-size: 0.98rem !important;
+
+        margin-bottom: 4px !important;
+    }
+
+    .service-card-content > p:not(.service-card-label),
+    .service-card-image-content > p:not(.service-card-label) {
+        font-size: 0.74rem !important;
+
+        line-height: 1.30 !important;
+
+        margin-bottom: 6px !important;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 }
 
@@ -1267,68 +1253,76 @@ p {
 }
 
 /* =========================================================
-   Areas
+   Areas (Compact, Sleek & Architectural)
    ========================================================= */
 
 .areas-layout {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 0.85fr)
-        minmax(0, 1.15fr);
+        minmax(0, 0.90fr)
+        minmax(0, 1.10fr);
 
-    gap: 70px;
+    gap: 36px;
 
     align-items: center;
 }
 
 .areas-intro > p:not(.eyebrow) {
-    margin-bottom: 30px;
+    margin-bottom: 22px;
 
-    color: var(--muted);
+    font-size: 0.92rem;
+
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, 0.72);
 }
 
 .areas-panel {
     position: relative;
 
-    padding: 10px;
+    padding: 6px;
 
     border:
-        1px solid var(--steel-300);
+        1px solid rgba(255, 255, 255, 0.12) !important;
 
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-lg);
 
     background:
         linear-gradient(
             145deg,
-            #ffffff,
-            #dfe4e7
-        );
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.015)
+        ) !important;
 
-    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 14px 40px rgba(0, 0, 0, 0.22);
 }
 
 .area-group {
     display: grid;
 
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 36px 1fr;
 
-    gap: 18px;
+    gap: 12px;
 
-    padding: 25px;
+    padding: 13px 18px;
 
     border-bottom:
-        1px solid var(--steel-200);
+        1px solid rgba(255, 255, 255, 0.07) !important;
 }
 
 .area-group:last-child {
-    border-bottom: 0;
+    border-bottom: 0 !important;
 }
 
 .area-group > span {
-    color: var(--green-700);
+    color: var(--green-500);
 
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 900;
 
     letter-spacing: 0.12em;
@@ -1337,19 +1331,21 @@ p {
 .area-group strong {
     display: block;
 
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 
-    color: var(--navy-900);
+    color: var(--white) !important;
 
-    font-size: 1.05rem;
+    font-size: 0.94rem;
 }
 
 .area-group p {
     margin: 0;
 
-    color: var(--muted);
+    color: rgba(255, 255, 255, 0.65) !important;
 
-    font-size: 0.9rem;
+    font-size: 0.80rem;
+
+    line-height: 1.35;
 }
 
 @media (max-width: 800px) {
@@ -1357,7 +1353,23 @@ p {
     .areas-layout {
         grid-template-columns: 1fr;
 
-        gap: 40px;
+        gap: 24px;
+    }
+
+    .areas-panel {
+        max-width: 360px;
+
+        margin-inline: auto;
+
+        border-radius: var(--radius-md);
+    }
+
+    .area-group {
+        padding: 10px 14px;
+
+        grid-template-columns: 28px 1fr;
+
+        gap: 8px;
     }
 }
 
@@ -1604,7 +1616,7 @@ p {
 
 
 /* ---------------------------------------------------------
-   Mobile Material Section (Sleek, No Full-Screen Bloat)
+   Mobile Material Section (Ultra-Compact Rounded Badge)
    --------------------------------------------------------- */
 
 @media (max-width: 800px) {
@@ -1612,38 +1624,58 @@ p {
     .material-grid {
         grid-template-columns: 1fr;
 
-        max-width: 440px;
+        max-width: 330px;
 
         margin-inline: auto;
+
+        min-height: 0;
 
         border-radius: var(--radius-md);
     }
 
     .material-panel {
-        min-height: 230px;
+        min-height: 140px;
     }
 
     .material-brick {
-        min-height: 230px;
+        min-height: 140px;
     }
 
     .material-content {
-        padding: 22px 20px 20px;
+        padding: 14px 16px;
+    }
+
+    .material-content h2 {
+        font-size: 1.10rem !important;
+
+        margin-bottom: 4px;
+    }
+
+    .material-content h3 {
+        font-size: 1.00rem !important;
+
+        margin-bottom: 4px;
+    }
+
+    .material-content p:not(.eyebrow) {
+        font-size: 0.74rem !important;
+
+        line-height: 1.3;
     }
 
     .material-emblem {
-        right: 18px;
-        bottom: 18px;
+        right: 14px;
+        bottom: 14px;
 
-        width: 56px;
-        height: 56px;
+        width: 44px;
+        height: 44px;
     }
 
     .material-steel .material-content {
-        bottom: 12px;
+        bottom: 8px;
 
         padding:
-            0 80px 0 20px;
+            0 58px 0 16px;
     }
 }
    
@@ -3012,71 +3044,52 @@ main > section {
 }
 
 
-/* Phone landscape */
+/* Phone landscape (Scaled Down & Compact) */
 @media (max-width: 850px) and (orientation: landscape) {
 
+    .project-showcase {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .project-image-main {
+        min-height: 200px;
+    }
+
     .project-small {
-        min-height: 330px;
+        min-height: 95px;
     }
 
     .project-small .project-image {
-        min-height: 330px;
+        min-height: 95px;
     }
 
     .project-small .project-image-content {
         top: auto !important;
-
         right: 0;
         left: 0;
-
         bottom: 0 !important;
-
         width: 100%;
-
-        padding:
-            24px 28px 24px;
-
+        padding: 12px 14px;
         transform: none !important;
     }
 
     .project-small .project-image-content .project-label {
-        display: block;
-
-        margin-bottom: 8px;
-
-        color: var(--green-500) !important;
-
-        font-size: 0.68rem;
-
-        line-height: 1.2;
-
-        letter-spacing: 0.12em;
+        font-size: 0.60rem;
+        margin-bottom: 3px;
     }
 
     .project-small .project-image-content h3 {
-        margin-bottom: 8px;
-
-        color: var(--white) !important;
-
-        font-size: 1.4rem;
-
-        line-height: 1.08;
+        font-size: 0.92rem;
+        margin-bottom: 4px;
     }
 
     .project-small .project-image-content p:not(.project-label) {
-        margin-bottom: 12px;
-
-        color:
-            rgba(255, 255, 255, 0.86) !important;
-
-        font-size: 0.9rem;
-
-        line-height: 1.4;
+        display: none !important;
     }
 
     .project-small .project-image-content a {
-        font-size: 0.82rem;
-
+        font-size: 0.74rem;
         color: var(--green-500) !important;
     }
 }
@@ -3474,23 +3487,24 @@ main > section {
 }
 
 /* =========================================================
-   Areas Master Map, Clickable Suburbs & Service Pills
+   Areas Master Map (Panoramic), Suburbs & Service Pills
    ========================================================= */
 
 .area-map-card {
     position: relative;
-    max-width: 950px;
-    margin: 40px auto 0;
+    max-width: 880px;
+    height: 380px;
+    margin: 28px auto 0;
     overflow: hidden;
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-lg);
     border: 1px solid rgba(255, 255, 255, 0.14);
     background: linear-gradient(145deg, rgba(8, 28, 43, 0.90), rgba(7, 21, 34, 0.95));
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35), 0 0 35px rgba(46, 214, 139, 0.08);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.30), 0 0 25px rgba(46, 214, 139, 0.08);
 }
 
 .area-map-card img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
     object-position: center;
@@ -3499,18 +3513,18 @@ main > section {
 .suburb-link-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
+    gap: 6px;
+    margin-top: 6px;
 }
 
 .suburb-link {
     display: inline-block;
-    padding: 4px 10px;
-    border-radius: 6px;
+    padding: 3px 8px;
+    border-radius: 4px;
     background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.09);
     color: rgba(255, 255, 255, 0.85);
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     text-decoration: none;
     transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
 }
@@ -3522,13 +3536,13 @@ main > section {
 }
 
 .areas-services-nav {
-    margin-top: 50px;
+    margin-top: 36px;
     text-align: center;
 }
 
 .areas-services-nav h3 {
-    margin-bottom: 18px;
-    font-size: 1.25rem;
+    margin-bottom: 14px;
+    font-size: 1.10rem;
     color: var(--white);
 }
 
@@ -3536,11 +3550,20 @@ main > section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .areas-service-pills .button {
-    font-size: 0.90rem;
-    min-height: 44px;
-    padding: 0 20px;
+    font-size: 0.80rem;
+    min-height: 40px;
+    padding: 0 16px;
+}
+
+@media (max-width: 700px) {
+
+    .area-map-card {
+        height: 220px;
+        max-width: 330px;
+        border-radius: var(--radius-md);
+    }
 }
