@@ -83,3 +83,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+/* =========================================================
+   Automatic Active Navigation Highlighter
+   ========================================================= */
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll(".site-nav a, .mobile-menu a");
+
+    navLinks.forEach((link) => {
+        const href = link.getAttribute("href");
+        if (!href) return;
+
+        if (currentPath.startsWith("/services") && href.includes("/services")) {
+            link.classList.add("is-active");
+            link.setAttribute("aria-current", "page");
+        } else if (currentPath.startsWith("/areas") && href.includes("/areas")) {
+            link.classList.add("is-active");
+            link.setAttribute("aria-current", "page");
+        } else if (currentPath.startsWith("/guides") && href.includes("/guides")) {
+            link.classList.add("is-active");
+            link.setAttribute("aria-current", "page");
+        }
+    });
+});
