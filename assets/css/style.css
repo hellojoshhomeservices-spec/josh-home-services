@@ -4238,3 +4238,34 @@ main > section {
     text-decoration-color: #2ed68b !important;
     text-shadow: 0 0 10px rgba(56, 189, 248, 0.70), 0 0 20px rgba(46, 214, 139, 0.45) !important;
 }
+
+/* =========================================================
+   Active Navigation Link & Clickable Map Enhancements
+   ========================================================= */
+
+/* Persistent Emerald Highlight for Active Page */
+.site-header .desktop-nav a.is-active,
+.site-header .site-nav a.is-active,
+.site-header .mobile-menu a.is-active {
+    color: #2ed68b !important;
+    text-shadow: 0 0 10px rgba(46, 214, 139, 0.50) !important;
+}
+
+/* Clickable Map Link Wrapper */
+.area-map-card a {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+
+.area-map-card a:hover img {
+    transform: scale(1.02);
+    transition: transform 300ms ease;
+}
+
+.area-map-card img {
+    transition: transform 300ms ease;
+}
