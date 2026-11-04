@@ -4096,3 +4096,119 @@ main > section {
         height: 180px !important;
     }
 }
+
+/* =========================================================
+   Client Reviews & Testimonials Section (Sleek Glass Cards)
+   ========================================================= */
+
+.reviews-section {
+    position: relative;
+    padding: 70px 0;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 36px;
+}
+
+.review-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 28px 24px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.055),
+        rgba(255, 255, 255, 0.015)
+    );
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.24);
+    transition: transform var(--transition-medium), border-color var(--transition-medium);
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(46, 214, 139, 0.35);
+}
+
+.review-stars {
+    display: flex;
+    gap: 4px;
+    color: #f59e0b;
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+    letter-spacing: 2px;
+}
+
+.review-text {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.86);
+    margin-bottom: 20px;
+}
+
+.review-author {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 14px;
+}
+
+.review-author strong {
+    color: var(--white);
+    font-size: 0.94rem;
+    font-weight: 800;
+}
+
+.review-author span {
+    color: var(--green-500);
+    font-size: 0.74rem;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+@media (max-width: 950px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 440px;
+        margin-inline: auto;
+    }
+
+    .review-card {
+        padding: 22px 20px;
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    .reviews-grid {
+        max-width: 320px !important;
+        margin-inline: auto !important;
+        gap: 16px !important;
+    }
+
+    .review-card {
+        padding: 18px 16px !important;
+        border-radius: var(--radius-md) !important;
+    }
+
+    .review-text {
+        font-size: 0.78rem !important;
+        line-height: 1.40 !important;
+        margin-bottom: 14px !important;
+    }
+
+    .review-author strong {
+        font-size: 0.86rem !important;
+    }
+
+    .review-author span {
+        font-size: 0.68rem !important;
+    }
+}
