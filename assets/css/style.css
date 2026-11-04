@@ -4212,3 +4212,29 @@ main > section {
         font-size: 0.68rem !important;
     }
 }
+
+/* =========================================================
+   Agency Footer Credit (B R M | Web Architect)
+   ========================================================= */
+
+.site-footer-credit {
+    margin-top: 14px !important;
+    font-size: 0.74rem !important;
+    color: rgba(255, 255, 255, 0.48) !important;
+    letter-spacing: 0.04em !important;
+}
+
+.agency-credit-link {
+    color: #38bdf8 !important;
+    font-weight: 850 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+    text-decoration-color: rgba(46, 214, 139, 0.75) !important;
+    transition: color 180ms ease, text-shadow 180ms ease, text-decoration-color 180ms ease !important;
+}
+
+.agency-credit-link:hover {
+    color: #67e8f9 !important;
+    text-decoration-color: #2ed68b !important;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.70), 0 0 20px rgba(46, 214, 139, 0.45) !important;
+}
